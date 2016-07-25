@@ -11,7 +11,7 @@ Other gamifying habit-tracking apps:
 
     * My own thoughts: Too overly complicated; I never feel motivated to deal with any sort of "learning curve" in the short-attention-span that I have when I use a smartphone. I've tried this app multiple times and I just never feel like dedicating any time to figuring it out, but I'm a fan of really simple apps. The difference between habits and dailies and to-do's is unclear, so the 3 separate menus feel like clutter. Avatar customization felt clunky, too many clicks, against my intuition of how I assumed the app would work. Menus felt organized in a completely random way. With mobile apps I like understanding exactly what I'm doing immediately. And why is it constantly loading? Should work offline.
 
-    * Criticisms from other users:
+    * Thoughts from other users:
       - "interface items take up way too much vertical space, preventing seeing more than 2 tasks a time."
       - "drop-down notifications in the app very slow and obtrusive, combined with network lagginess"
       - "have to stick with the game til level 15 before I can have fun! a good game design should hook from the get-go"
@@ -46,7 +46,7 @@ Self-improvement-focused millennials with an affection for the kawaii digital pe
 https://trello.com/b/gkAqNVkp/habitmon
 
 ## Technologies ##
-  -Swift
-  -Xcode
-  -Xcode Interface Builder
-  -SQLite
+  - Swift
+  - Xcode
+  - Xcode Interface Builder
+  - SQLite
