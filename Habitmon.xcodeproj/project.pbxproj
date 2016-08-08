@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B3927357509F31A26ECAC3 /* Pods_Habitmon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */; };
+		925630B85CC1D207D0917664 /* Pods_HabitmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */; };
 		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
 		B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC891D58F442007D3FD7 /* MasterViewController.swift */; };
 		B35ACC8C1D58F442007D3FD7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */; };
@@ -27,6 +29,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habitmon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitmonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3D9508C1DA12517F728523 /* Pods-Habitmon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitmon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon.release.xcconfig"; sourceTree = "<group>"; };
+		65E1F7D8D0D8B039FC161A18 /* Pods-HabitmonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitmonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HabitmonTests/Pods-HabitmonTests.release.xcconfig"; sourceTree = "<group>"; };
+		8549566D7D1ECC732400D444 /* Pods-HabitmonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitmonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HabitmonTests/Pods-HabitmonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitmon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon.debug.xcconfig"; sourceTree = "<group>"; };
 		B35ACC841D58F442007D3FD7 /* Habitmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35ACC871D58F442007D3FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35ACC891D58F442007D3FD7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B3927357509F31A26ECAC3 /* Pods_Habitmon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925630B85CC1D207D0917664 /* Pods_HabitmonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53C68B651ACD911EC2158FA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */,
+				2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8BC24982B51C29E7A6F2678 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */,
+				4B3D9508C1DA12517F728523 /* Pods-Habitmon.release.xcconfig */,
+				8549566D7D1ECC732400D444 /* Pods-HabitmonTests.debug.xcconfig */,
+				65E1F7D8D0D8B039FC161A18 /* Pods-HabitmonTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B35ACC7B1D58F442007D3FD7 = {
 			isa = PBXGroup;
 			children = (
 				B35ACC861D58F442007D3FD7 /* Habitmon */,
 				B35ACC9D1D58F443007D3FD7 /* HabitmonTests */,
 				B35ACC851D58F442007D3FD7 /* Products */,
+				A8BC24982B51C29E7A6F2678 /* Pods */,
+				53C68B651ACD911EC2158FA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B35ACCA31D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "Habitmon" */;
 			buildPhases = (
+				1AED88402334CAF616592353 /* [CP] Check Pods Manifest.lock */,
 				B35ACC801D58F442007D3FD7 /* Sources */,
 				B35ACC811D58F442007D3FD7 /* Frameworks */,
 				B35ACC821D58F442007D3FD7 /* Resources */,
+				54EF186EFAEC54EEEED9BE5C /* [CP] Embed Pods Frameworks */,
+				79FCFF8DDD142B8933928EA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B35ACCA61D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "HabitmonTests" */;
 			buildPhases = (
+				AC681E13467B989E1F802F9D /* [CP] Check Pods Manifest.lock */,
 				B35ACC961D58F443007D3FD7 /* Sources */,
 				B35ACC971D58F443007D3FD7 /* Frameworks */,
 				B35ACC981D58F443007D3FD7 /* Resources */,
+				EDCF1B9747B6EFA54CC64D2A /* [CP] Embed Pods Frameworks */,
+				8FD958D1DDFC7A47BFD41805 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +232,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AED88402334CAF616592353 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54EF186EFAEC54EEEED9BE5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79FCFF8DDD142B8933928EA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FD958D1DDFC7A47BFD41805 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HabitmonTests/Pods-HabitmonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC681E13467B989E1F802F9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDCF1B9747B6EFA54CC64D2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HabitmonTests/Pods-HabitmonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B35ACC801D58F442007D3FD7 /* Sources */ = {
@@ -331,6 +462,7 @@
 		};
 		B35ACCA41D58F443007D3FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Habitmon/Info.plist;
@@ -342,6 +474,7 @@
 		};
 		B35ACCA51D58F443007D3FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B3D9508C1DA12517F728523 /* Pods-Habitmon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Habitmon/Info.plist;
@@ -353,6 +486,7 @@
 		};
 		B35ACCA71D58F443007D3FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8549566D7D1ECC732400D444 /* Pods-HabitmonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HabitmonTests/Info.plist;
@@ -365,6 +499,7 @@
 		};
 		B35ACCA81D58F443007D3FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65E1F7D8D0D8B039FC161A18 /* Pods-HabitmonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HabitmonTests/Info.plist;
@@ -394,6 +529,7 @@
 				B35ACCA51D58F443007D3FD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B35ACCA61D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "HabitmonTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +538,7 @@
 				B35ACCA81D58F443007D3FD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
