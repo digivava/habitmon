@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
     navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
     splitViewController.delegate = self
+    
+    // My attempt at creating database schema after app loads
+    let habitData = DatabaseConnection.new
+    habitData.createTable()
+    
     return true
   }
 
