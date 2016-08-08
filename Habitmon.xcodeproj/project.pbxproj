@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
+		B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC891D58F442007D3FD7 /* MasterViewController.swift */; };
+		B35ACC8C1D58F442007D3FD7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */; };
+		B35ACC8F1D58F442007D3FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC8D1D58F442007D3FD7 /* Main.storyboard */; };
+		B35ACC911D58F442007D3FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC901D58F442007D3FD7 /* Assets.xcassets */; };
+		B35ACC941D58F442007D3FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC921D58F442007D3FD7 /* LaunchScreen.storyboard */; };
+		B35ACC9F1D58F443007D3FD7 /* HabitmonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC9E1D58F443007D3FD7 /* HabitmonTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B35ACC9B1D58F443007D3FD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B35ACC7C1D58F442007D3FD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B35ACC831D58F442007D3FD7;
+			remoteInfo = Habitmon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B35ACC841D58F442007D3FD7 /* Habitmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35ACC871D58F442007D3FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B35ACC891D58F442007D3FD7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B35ACC8E1D58F442007D3FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B35ACC901D58F442007D3FD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B35ACC931D58F442007D3FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B35ACC951D58F442007D3FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35ACC9A1D58F443007D3FD7 /* HabitmonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitmonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35ACC9E1D58F443007D3FD7 /* HabitmonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitmonTests.swift; sourceTree = "<group>"; };
+		B35ACCA01D58F443007D3FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B35ACC811D58F442007D3FD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35ACC971D58F443007D3FD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B35ACC7B1D58F442007D3FD7 = {
+			isa = PBXGroup;
+			children = (
+				B35ACC861D58F442007D3FD7 /* Habitmon */,
+				B35ACC9D1D58F443007D3FD7 /* HabitmonTests */,
+				B35ACC851D58F442007D3FD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B35ACC851D58F442007D3FD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B35ACC841D58F442007D3FD7 /* Habitmon.app */,
+				B35ACC9A1D58F443007D3FD7 /* HabitmonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B35ACC861D58F442007D3FD7 /* Habitmon */ = {
+			isa = PBXGroup;
+			children = (
+				B35ACC871D58F442007D3FD7 /* AppDelegate.swift */,
+				B35ACC891D58F442007D3FD7 /* MasterViewController.swift */,
+				B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */,
+				B35ACC8D1D58F442007D3FD7 /* Main.storyboard */,
+				B35ACC901D58F442007D3FD7 /* Assets.xcassets */,
+				B35ACC921D58F442007D3FD7 /* LaunchScreen.storyboard */,
+				B35ACC951D58F442007D3FD7 /* Info.plist */,
+			);
+			path = Habitmon;
+			sourceTree = "<group>";
+		};
+		B35ACC9D1D58F443007D3FD7 /* HabitmonTests */ = {
+			isa = PBXGroup;
+			children = (
+				B35ACC9E1D58F443007D3FD7 /* HabitmonTests.swift */,
+				B35ACCA01D58F443007D3FD7 /* Info.plist */,
+			);
+			path = HabitmonTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B35ACC831D58F442007D3FD7 /* Habitmon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B35ACCA31D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "Habitmon" */;
+			buildPhases = (
+				B35ACC801D58F442007D3FD7 /* Sources */,
+				B35ACC811D58F442007D3FD7 /* Frameworks */,
+				B35ACC821D58F442007D3FD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Habitmon;
+			productName = Habitmon;
+			productReference = B35ACC841D58F442007D3FD7 /* Habitmon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B35ACC991D58F443007D3FD7 /* HabitmonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B35ACCA61D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "HabitmonTests" */;
+			buildPhases = (
+				B35ACC961D58F443007D3FD7 /* Sources */,
+				B35ACC971D58F443007D3FD7 /* Frameworks */,
+				B35ACC981D58F443007D3FD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B35ACC9C1D58F443007D3FD7 /* PBXTargetDependency */,
+			);
+			name = HabitmonTests;
+			productName = HabitmonTests;
+			productReference = B35ACC9A1D58F443007D3FD7 /* HabitmonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B35ACC7C1D58F442007D3FD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = VAL;
+				TargetAttributes = {
+					B35ACC831D58F442007D3FD7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					B35ACC991D58F443007D3FD7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B35ACC831D58F442007D3FD7;
+					};
+				};
+			};
+			buildConfigurationList = B35ACC7F1D58F442007D3FD7 /* Build configuration list for PBXProject "Habitmon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B35ACC7B1D58F442007D3FD7;
+			productRefGroup = B35ACC851D58F442007D3FD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B35ACC831D58F442007D3FD7 /* Habitmon */,
+				B35ACC991D58F443007D3FD7 /* HabitmonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B35ACC821D58F442007D3FD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35ACC941D58F442007D3FD7 /* LaunchScreen.storyboard in Resources */,
+				B35ACC911D58F442007D3FD7 /* Assets.xcassets in Resources */,
+				B35ACC8F1D58F442007D3FD7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35ACC981D58F443007D3FD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B35ACC801D58F442007D3FD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35ACC8C1D58F442007D3FD7 /* DetailViewController.swift in Sources */,
+				B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */,
+				B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35ACC961D58F443007D3FD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35ACC9F1D58F443007D3FD7 /* HabitmonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B35ACC9C1D58F443007D3FD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B35ACC831D58F442007D3FD7 /* Habitmon */;
+			targetProxy = B35ACC9B1D58F443007D3FD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B35ACC8D1D58F442007D3FD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35ACC8E1D58F442007D3FD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B35ACC921D58F442007D3FD7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35ACC931D58F442007D3FD7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B35ACCA11D58F443007D3FD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B35ACCA21D58F443007D3FD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B35ACCA41D58F443007D3FD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Habitmon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VAL.Habitmon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B35ACCA51D58F443007D3FD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Habitmon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VAL.Habitmon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B35ACCA71D58F443007D3FD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HabitmonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VAL.HabitmonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Habitmon.app/Habitmon";
+			};
+			name = Debug;
+		};
+		B35ACCA81D58F443007D3FD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HabitmonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VAL.HabitmonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Habitmon.app/Habitmon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B35ACC7F1D58F442007D3FD7 /* Build configuration list for PBXProject "Habitmon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35ACCA11D58F443007D3FD7 /* Debug */,
+				B35ACCA21D58F443007D3FD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B35ACCA31D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "Habitmon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35ACCA41D58F443007D3FD7 /* Debug */,
+				B35ACCA51D58F443007D3FD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B35ACCA61D58F443007D3FD7 /* Build configuration list for PBXNativeTarget "HabitmonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35ACCA71D58F443007D3FD7 /* Debug */,
+				B35ACCA81D58F443007D3FD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B35ACC7C1D58F442007D3FD7 /* Project object */;
+}
