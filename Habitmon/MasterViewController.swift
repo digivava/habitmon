@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MasterViewController: UITableViewController {
 
   var detailViewController: DetailViewController? = nil
   var objects = [AnyObject]()
+  
+//  let realm = try! Realm()
+//  lazy var habits: Results<Habit> = { self.realm.objects(Habit) }()
 
 
   override func viewDidLoad() {

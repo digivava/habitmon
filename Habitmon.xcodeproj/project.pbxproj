@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26B3927357509F31A26ECAC3 /* Pods_Habitmon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */; };
 		925630B85CC1D207D0917664 /* Pods_HabitmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */; };
 		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
 		B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC891D58F442007D3FD7 /* MasterViewController.swift */; };
@@ -16,15 +15,55 @@
 		B35ACC911D58F442007D3FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC901D58F442007D3FD7 /* Assets.xcassets */; };
 		B35ACC941D58F442007D3FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC921D58F442007D3FD7 /* LaunchScreen.storyboard */; };
 		B35ACC9F1D58F443007D3FD7 /* HabitmonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC9E1D58F443007D3FD7 /* HabitmonTests.swift */; };
+		B38094721D594B450079C8D1 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38094711D594B450079C8D1 /* Habit.swift */; };
+		B38094731D594DCA0079C8D1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B354AEB81D5945F10084AE80 /* Realm.framework */; };
+		B38094741D594DCA0079C8D1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B354AEBA1D5945F10084AE80 /* RealmSwift.framework */; };
+		B3AD3F911D593C8A0096CDDE /* Pods_Habitmon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AD3F8C1D593C650096CDDE /* Pods_Habitmon.framework */; };
+		D9C7DF19C047D997E7DE2C1A /* Pods_Habitmon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B354AEB71D5945F10084AE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AD3F851D593C650096CDDE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA96C924733EB2D8C5CAFDB00BC69101;
+			remoteInfo = Realm;
+		};
+		B354AEB91D5945F10084AE80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AD3F851D593C650096CDDE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E5E90C69567BC59CC33903F9FD957A8;
+			remoteInfo = RealmSwift;
+		};
 		B35ACC9B1D58F443007D3FD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B35ACC7C1D58F442007D3FD7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B35ACC831D58F442007D3FD7;
 			remoteInfo = Habitmon;
+		};
+		B3AD3F8B1D593C650096CDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AD3F851D593C650096CDDE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3ECC80ACA514A97905453DC3D86FB17;
+			remoteInfo = "Pods-Habitmon";
+		};
+		B3AD3F8D1D593C650096CDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AD3F851D593C650096CDDE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68CB9A2B6614CCC90ADBBD65DE45A062;
+			remoteInfo = "Pods-HabitmonTests";
+		};
+		B3AD3F8F1D593C650096CDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AD3F851D593C650096CDDE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5FB4293AFF9D382266F761E2294179FA;
+			remoteInfo = SQLite.swift;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,6 +85,8 @@
 		B35ACC9A1D58F443007D3FD7 /* HabitmonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitmonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35ACC9E1D58F443007D3FD7 /* HabitmonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitmonTests.swift; sourceTree = "<group>"; };
 		B35ACCA01D58F443007D3FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B38094711D594B450079C8D1 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		B3AD3F851D593C650096CDDE /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +94,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B3927357509F31A26ECAC3 /* Pods_Habitmon.framework in Frameworks */,
+				B38094731D594DCA0079C8D1 /* Realm.framework in Frameworks */,
+				B38094741D594DCA0079C8D1 /* RealmSwift.framework in Frameworks */,
+				B3AD3F911D593C8A0096CDDE /* Pods_Habitmon.framework in Frameworks */,
+				D9C7DF19C047D997E7DE2C1A /* Pods_Habitmon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +115,7 @@
 		53C68B651ACD911EC2158FA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3AD3F851D593C650096CDDE /* Pods.xcodeproj */,
 				1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */,
 				2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */,
 			);
@@ -112,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				B35ACC871D58F442007D3FD7 /* AppDelegate.swift */,
+				B38094711D594B450079C8D1 /* Habit.swift */,
 				B35ACC891D58F442007D3FD7 /* MasterViewController.swift */,
 				B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */,
 				B35ACC8D1D58F442007D3FD7 /* Main.storyboard */,
@@ -129,6 +175,18 @@
 				B35ACCA01D58F443007D3FD7 /* Info.plist */,
 			);
 			path = HabitmonTests;
+			sourceTree = "<group>";
+		};
+		B3AD3F861D593C650096CDDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3AD3F8C1D593C650096CDDE /* Pods_Habitmon.framework */,
+				B3AD3F8E1D593C650096CDDE /* Pods_HabitmonTests.framework */,
+				B354AEB81D5945F10084AE80 /* Realm.framework */,
+				B354AEBA1D5945F10084AE80 /* RealmSwift.framework */,
+				B3AD3F901D593C650096CDDE /* SQLite.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +263,12 @@
 			mainGroup = B35ACC7B1D58F442007D3FD7;
 			productRefGroup = B35ACC851D58F442007D3FD7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B3AD3F861D593C650096CDDE /* Products */;
+					ProjectRef = B3AD3F851D593C650096CDDE /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B35ACC831D58F442007D3FD7 /* Habitmon */,
@@ -212,6 +276,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B354AEB81D5945F10084AE80 /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Realm.framework;
+			remoteRef = B354AEB71D5945F10084AE80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B354AEBA1D5945F10084AE80 /* RealmSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RealmSwift.framework;
+			remoteRef = B354AEB91D5945F10084AE80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B3AD3F8C1D593C650096CDDE /* Pods_Habitmon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Habitmon.framework;
+			remoteRef = B3AD3F8B1D593C650096CDDE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B3AD3F8E1D593C650096CDDE /* Pods_HabitmonTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_HabitmonTests.framework;
+			remoteRef = B3AD3F8D1D593C650096CDDE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B3AD3F901D593C650096CDDE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = B3AD3F8F1D593C650096CDDE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B35ACC821D58F442007D3FD7 /* Resources */ = {
@@ -331,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38094721D594B450079C8D1 /* Habit.swift in Sources */,
 				B35ACC8C1D58F442007D3FD7 /* DetailViewController.swift in Sources */,
 				B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */,
 				B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */,

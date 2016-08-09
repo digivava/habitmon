@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -21,9 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
     splitViewController.delegate = self
     
-    // My attempt at creating database schema after app loads
-    let habitData = DatabaseConnection.new
-    habitData.createTable()
+    Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
+    
+    let realm = try! Realm()
+    
+    try! realm.write {
+      realm.create(Habit.self, value: ["id": 1, "name": "Flossing", "habitmon": "Placodile"])
+    }
+    
+    let habits = realm.objects(Habit.self)
+    print(habits)
     
     return true
   }

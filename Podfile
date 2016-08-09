@@ -8,6 +8,7 @@ target 'Habitmon' do
   # Pods for Habitmon
 
   pod 'SQLite.swift', '~> 0.10.1'
+  pod 'RealmSwift'
 
   target 'HabitmonTests' do
     inherit! :search_paths
