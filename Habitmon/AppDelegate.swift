@@ -22,12 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
     splitViewController.delegate = self
     
-    Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
-    
     let realm = try! Realm()
     
-    try! realm.write {
-      realm.create(Habit.self, value: ["id": 1, "name": "Flossing", "habitmon": "Placodile"])
+//    (REMOVE BEFORE DEPLOYMENT) this is just for clearing the realm database when I need to test it fresh
+//    try! realm.write {
+//      realm.deleteAll()
+//    }
+    
+//     create all the habits that exist, if they haven't been created already
+    if realm.objects(Habit).count == 0 {
+      try! realm.write {
+        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup"])
+        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile"])
+        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
+      }
     }
     
     let habits = realm.objects(Habit.self)

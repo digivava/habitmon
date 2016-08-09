@@ -21,6 +21,10 @@ class MasterViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+//    let defaultRealm = try! Realm()
+//    populateHabitsList(defaultRealm)
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
     let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject(_:)))
@@ -40,6 +44,12 @@ class MasterViewController: UITableViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  // MARK: - Habit List Actions
+  
+//  func populateHabitsList(realm: Realm) {
+//    var userHabits = realm.objects(Habit.self).filter("status = 'active'")
+//  }
 
   func insertNewObject(sender: AnyObject) {
     objects.insert(NSDate(), atIndex: 0)
