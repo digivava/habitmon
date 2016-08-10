@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		925630B85CC1D207D0917664 /* Pods_HabitmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */; };
+		B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */; };
 		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
-		B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC891D58F442007D3FD7 /* MasterViewController.swift */; };
-		B35ACC8C1D58F442007D3FD7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */; };
+		B35ACC8A1D58F442007D3FD7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC891D58F442007D3FD7 /* MainViewController.swift */; };
 		B35ACC8F1D58F442007D3FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC8D1D58F442007D3FD7 /* Main.storyboard */; };
 		B35ACC911D58F442007D3FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC901D58F442007D3FD7 /* Assets.xcassets */; };
 		B35ACC941D58F442007D3FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC921D58F442007D3FD7 /* LaunchScreen.storyboard */; };
@@ -74,10 +74,10 @@
 		65E1F7D8D0D8B039FC161A18 /* Pods-HabitmonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitmonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HabitmonTests/Pods-HabitmonTests.release.xcconfig"; sourceTree = "<group>"; };
 		8549566D7D1ECC732400D444 /* Pods-HabitmonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitmonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HabitmonTests/Pods-HabitmonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitmon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon.debug.xcconfig"; sourceTree = "<group>"; };
+		B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		B35ACC841D58F442007D3FD7 /* Habitmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35ACC871D58F442007D3FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B35ACC891D58F442007D3FD7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B35ACC891D58F442007D3FD7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B35ACC8E1D58F442007D3FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B35ACC901D58F442007D3FD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35ACC931D58F442007D3FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,9 +158,9 @@
 			children = (
 				B35ACC871D58F442007D3FD7 /* AppDelegate.swift */,
 				B38094711D594B450079C8D1 /* Habit.swift */,
-				B35ACC891D58F442007D3FD7 /* MasterViewController.swift */,
-				B35ACC8B1D58F442007D3FD7 /* DetailViewController.swift */,
+				B35ACC891D58F442007D3FD7 /* MainViewController.swift */,
 				B35ACC8D1D58F442007D3FD7 /* Main.storyboard */,
+				B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */,
 				B35ACC901D58F442007D3FD7 /* Assets.xcassets */,
 				B35ACC921D58F442007D3FD7 /* LaunchScreen.storyboard */,
 				B35ACC951D58F442007D3FD7 /* Info.plist */,
@@ -434,8 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38094721D594B450079C8D1 /* Habit.swift in Sources */,
-				B35ACC8C1D58F442007D3FD7 /* DetailViewController.swift in Sources */,
-				B35ACC8A1D58F442007D3FD7 /* MasterViewController.swift in Sources */,
+				B35ACC8A1D58F442007D3FD7 /* MainViewController.swift in Sources */,
+				B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */,
 				B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
