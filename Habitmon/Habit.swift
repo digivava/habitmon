@@ -19,6 +19,7 @@ class Habit: Object {
   dynamic var habitmon: String?
   dynamic var level: Int = 0
   dynamic var evolveLevel: Int = 10
+  //this needs to be a UIImage eventually, but it should start as NSData type
   dynamic var image: String?
   dynamic var profile: String?
   dynamic var cheatDays: Int = 3

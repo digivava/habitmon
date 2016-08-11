@@ -33,9 +33,9 @@ class HabitTableViewController: UITableViewController {
     
     if realm.objects(Habit).count == 0 {
       try! realm.write {
-        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup"])
-        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile"])
-        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
+        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup", "image": "lollipup"])
+        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile", "image": "monkey"])
+//        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
       }
     }
     /////
@@ -69,8 +69,11 @@ class HabitTableViewController: UITableViewController {
     
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! HabitTableViewCell
     
+    print("test")
+    print(habit.image)
+    
     cell.habitNameLabel.text = habit.name
-//    cell.habitmonImage.image = habit.image
+    cell.habitmonImage.image = UIImage(named: habit.image!)
     cell.levelNumberLabel.text = String(habit.level)
     
     return cell

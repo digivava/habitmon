@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import RealmSwift
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,27 +17,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
+//    let config = Realm.Configuration(
+//      // Set the new schema version. This must be greater than the previously used
+//      // version (if you've never set a schema version before, the version is 0).
+//      schemaVersion: 1,
+//      
+//      // Set the block which will be called automatically when opening a Realm with
+//      // a schema version lower than the one set above
+//      migrationBlock: { migration, oldSchemaVersion in
+//        // We haven’t migrated anything yet, so oldSchemaVersion == 0
+////        if (oldSchemaVersion < 1) {
+////          // Nothing to do!
+////          // Realm will automatically detect new properties and removed properties
+////          // And will update the schema on disk automatically
+////        }
+//        
+//        //stack overflow example
+//        if oldSchemaVersion < 1 {
+//          migration.enumerate(Habit.className()) { oldObject, newObject in
+//            let image = oldObject!["image"] as! String?
+//            newObject!["image"] = image as! NSData?
+//          }    }
+//    })
+    
+    // Tell Realm to use this new configuration object for the default Realm
+//    Realm.Configuration.defaultConfiguration = config
+//    
+//    // Now that we've told Realm how to handle the schema change, opening the file
+//    // will automatically perform the migration
 //    let realm = try! Realm()
-//    try! realm.write {
-//      realm.deleteAll()
-//    }
-    
-//    (REMOVE BEFORE DEPLOYMENT) this is just for clearing the realm database when I need to test it fresh
-//    try! realm.write {
-//      realm.deleteAll()
-//    }
-    
-//     create all the habits that exist, if they haven't been created already
-//    if realm.objects(Habit).count == 0 {
-//      try! realm.write {
-//        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup"])
-//        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile"])
-//        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
-//      }
-//    }
-    
-//    let habits = realm.objects(Habit.self)
-//    print(habits)
     
     return true
   }
