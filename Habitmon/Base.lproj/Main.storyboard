@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="3mN-vU-wnv">
             <objects>
-                <tableViewController id="255-Xo-J3o" sceneMemberID="viewController">
+                <tableViewController id="255-Xo-J3o" customClass="MainViewController" customModule="Habitmon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="M6X-05-kRd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UGj-0C-iCh" id="fqf-L5-VZ2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lollipup" translatesAutoresizingMaskIntoConstraints="NO" id="mMz-Uw-Eh5">
@@ -57,6 +57,11 @@
                                         <constraint firstItem="mMz-Uw-Eh5" firstAttribute="centerY" secondItem="Xsu-nf-5sk" secondAttribute="centerY" id="x2y-yQ-393"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="habitmonImageView" destination="mMz-Uw-Eh5" id="tRq-ch-2B1"/>
+                                    <outlet property="levelLabel" destination="Xsu-nf-5sk" id="eYv-3r-GWk"/>
+                                    <outlet property="nameLabel" destination="mxF-EL-pfG" id="r0c-Uj-AKK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -14,11 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
-    let realm = try! Realm()
+//    let realm = try! Realm()
     
 //    (REMOVE BEFORE DEPLOYMENT) this is just for clearing the realm database when I need to test it fresh
 //    try! realm.write {
@@ -26,16 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
     
 //     create all the habits that exist, if they haven't been created already
-    if realm.objects(Habit).count == 0 {
-      try! realm.write {
-        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup"])
-        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile"])
-        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
-      }
-    }
+//    if realm.objects(Habit).count == 0 {
+//      try! realm.write {
+//        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup"])
+//        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile"])
+//        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
+//      }
+//    }
     
-    let habits = realm.objects(Habit.self)
-    print(habits)
+//    let habits = realm.objects(Habit.self)
+//    print(habits)
     
     return true
   }
