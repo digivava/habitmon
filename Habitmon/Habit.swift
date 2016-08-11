@@ -19,7 +19,7 @@ class Habit: Object {
   dynamic var habitmon: String?
   dynamic var level: Int = 0
   dynamic var evolveLevel: Int = 10
-  dynamic var image: UIImage?
+  dynamic var image: String?
   dynamic var profile: String?
   dynamic var cheatDays: Int = 3
   dynamic var checked: Bool = false

@@ -1,78 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="255-Xo-J3o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FV5-ZO-VrX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="3mN-vU-wnv">
+        <!--Habit Table View Controller-->
+        <scene sceneID="6Yk-cx-c0G">
             <objects>
-                <tableViewController id="255-Xo-J3o" customClass="MainViewController" customModule="Habitmon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="M6X-05-kRd">
+                <tableViewController id="FV5-ZO-VrX" customClass="HabitTableViewController" customModule="Habitmon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="mON-9g-RGh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HabitTableViewCell" rowHeight="90" id="UGj-0C-iCh" customClass="HabitTableViewCell" customModule="Habitmon" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HabitTableViewCell" rowHeight="90" id="Gub-eb-ft4" customClass="HabitTableViewCell" customModule="Habitmon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UGj-0C-iCh" id="fqf-L5-VZ2">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gub-eb-ft4" id="gz1-6l-VUe">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lollipup" translatesAutoresizingMaskIntoConstraints="NO" id="mMz-Uw-Eh5">
-                                            <rect key="frame" x="0.0" y="2" width="84" height="88"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="84" id="fmr-By-8fk"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lollipup" translatesAutoresizingMaskIntoConstraints="NO" id="mph-Mb-4co">
+                                            <rect key="frame" x="0.0" y="0.0" width="84" height="89"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsu-nf-5sk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No sweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLL-OT-1Ub">
+                                            <rect key="frame" x="92" y="30" width="411" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-Gr-YDB">
                                             <rect key="frame" x="511" y="2" width="89" height="89"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="89" id="zsp-qf-KgY"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No sweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxF-EL-pfG">
-                                            <rect key="frame" x="92" y="30" width="411" height="29"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="mxF-EL-pfG" firstAttribute="top" secondItem="fqf-L5-VZ2" secondAttribute="topMargin" constant="22" id="1C8-eF-Qz4"/>
-                                        <constraint firstItem="mMz-Uw-Eh5" firstAttribute="leading" secondItem="fqf-L5-VZ2" secondAttribute="leading" id="7rK-oo-uOz"/>
-                                        <constraint firstAttribute="trailing" secondItem="Xsu-nf-5sk" secondAttribute="trailing" id="HmQ-JL-c0C"/>
-                                        <constraint firstItem="mxF-EL-pfG" firstAttribute="centerY" secondItem="fqf-L5-VZ2" secondAttribute="centerY" id="LFR-A6-jVf"/>
-                                        <constraint firstItem="Xsu-nf-5sk" firstAttribute="leading" secondItem="mxF-EL-pfG" secondAttribute="trailing" constant="8" symbolic="YES" id="LNy-xP-8Qe"/>
-                                        <constraint firstItem="mxF-EL-pfG" firstAttribute="leading" secondItem="mMz-Uw-Eh5" secondAttribute="trailing" constant="8" symbolic="YES" id="Q1F-cH-hVL"/>
-                                        <constraint firstItem="mMz-Uw-Eh5" firstAttribute="top" secondItem="Xsu-nf-5sk" secondAttribute="top" id="Rok-bd-wQF"/>
-                                        <constraint firstItem="mMz-Uw-Eh5" firstAttribute="top" secondItem="fqf-L5-VZ2" secondAttribute="topMargin" constant="-6" id="ShB-MV-TpM"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="mMz-Uw-Eh5" secondAttribute="bottom" constant="-8.5" id="eS1-RQ-Y5e"/>
-                                        <constraint firstItem="mMz-Uw-Eh5" firstAttribute="centerY" secondItem="Xsu-nf-5sk" secondAttribute="centerY" id="x2y-yQ-393"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="habitmonImageView" destination="mMz-Uw-Eh5" id="tRq-ch-2B1"/>
-                                    <outlet property="levelLabel" destination="Xsu-nf-5sk" id="eYv-3r-GWk"/>
-                                    <outlet property="nameLabel" destination="mxF-EL-pfG" id="r0c-Uj-AKK"/>
+                                    <outlet property="habitNameLabel" destination="yLL-OT-1Ub" id="dnm-LY-cvj"/>
+                                    <outlet property="habitmonImage" destination="mph-Mb-4co" id="Sbm-TB-yat"/>
+                                    <outlet property="levelNumberLabel" destination="x4J-Gr-YDB" id="Hkh-R1-60m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="255-Xo-J3o" id="idY-TO-0kh"/>
-                            <outlet property="delegate" destination="255-Xo-J3o" id="JfH-cy-Zxh"/>
+                            <outlet property="dataSource" destination="FV5-ZO-VrX" id="hcJ-bq-mCI"/>
+                            <outlet property="delegate" destination="FV5-ZO-VrX" id="yGH-gw-GJf"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U3P-K8-wOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcf-QQ-AiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="-739"/>
+            <point key="canvasLocation" x="-144" y="-739"/>
         </scene>
     </scenes>
     <resources>

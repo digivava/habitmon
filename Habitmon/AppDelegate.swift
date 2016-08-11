@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
 //    let realm = try! Realm()
+//    try! realm.write {
+//      realm.deleteAll()
+//    }
     
 //    (REMOVE BEFORE DEPLOYMENT) this is just for clearing the realm database when I need to test it fresh
 //    try! realm.write {

@@ -1,15 +1,15 @@
 //
-//  MainViewController.swift
+//  HabitTableViewController.swift
 //  Habitmon
 //
-//  Created by VAL on 2016/08/08.
+//  Created by VAL on 2016/08/11.
 //  Copyright © 2016年 VAL. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class MainViewController: UITableViewController {
+class HabitTableViewController: UITableViewController {
   
   let realm = try! Realm()
   var habits: Results<Habit>!
@@ -18,8 +18,8 @@ class MainViewController: UITableViewController {
     habits = try! Realm().objects(Habit)
     print(habits)
   }
-
-
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -27,9 +27,9 @@ class MainViewController: UITableViewController {
     habits = realm.objects(Habit.self)
     
     ///// TEMPORARY for seed data
-      try! realm.write {
-        realm.deleteAll()
-      }
+    try! realm.write {
+      realm.deleteAll()
+    }
     
     if realm.objects(Habit).count == 0 {
       try! realm.write {
@@ -42,8 +42,8 @@ class MainViewController: UITableViewController {
     
     loadHabits()
     print("blahblahblah")
-    }
-
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -69,18 +69,19 @@ class MainViewController: UITableViewController {
     
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! HabitTableViewCell
     
-    cell.nameLabel.text = habit.name
-    cell.habitmonImageView.image = habit.image
-    cell.levelLabel.text = String(habit.level)
+    cell.habitNameLabel.text = habit.name
+//    cell.habitmonImage.image = habit.image
+    cell.levelNumberLabel.text = String(habit.level)
     
     return cell
   }
   
   // MARK: - Habit List Actions
   
-//  func populateHabitsList(realm: Realm) {
-//    var userHabits = realm.objects(Habit.self).filter("status = 'active'")
-//  }
-
+  //  func populateHabitsList(realm: Realm) {
+  //    var userHabits = realm.objects(Habit.self).filter("status = 'active'")
+  //  }
+  
 }
+
 

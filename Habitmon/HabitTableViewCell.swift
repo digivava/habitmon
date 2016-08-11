@@ -11,9 +11,9 @@ import UIKit
 class HabitTableViewCell: UITableViewCell {
   
   // MARK: Properties
-  @IBOutlet weak var habitmonImageView: UIImageView!
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var levelLabel: UILabel!
+  @IBOutlet weak var habitmonImage: UIImageView!
+  @IBOutlet weak var habitNameLabel: UILabel!
+  @IBOutlet weak var levelNumberLabel: UILabel!
   
   
 
