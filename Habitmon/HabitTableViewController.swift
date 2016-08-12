@@ -15,7 +15,7 @@ class HabitTableViewController: UITableViewController {
   var habits: Results<Habit>!
   
   func loadHabits() {
-    habits = try! Realm().objects(Habit)
+    habits = try! Realm().objects(Habit).filter("active = true")
     print(habits)
   }
   
@@ -33,7 +33,7 @@ class HabitTableViewController: UITableViewController {
     
     if realm.objects(Habit).count == 0 {
       try! realm.write {
-        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup", "image": "lollipup"])
+        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Lollipup", "image": "lollipup", "active": true])
         realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon": "Plaqodile", "image": "monkey"])
 //        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
       }
