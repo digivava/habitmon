@@ -17,6 +17,8 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var habitmonImage: UIImageView!
   @IBOutlet weak var levelNumberLabel: UILabel!
   @IBOutlet weak var habitmonNameLabel: UILabel!
+  @IBOutlet weak var habitmonDescription: UILabel!
+  @IBOutlet weak var evolveLevelLabel: UILabel!
   
   
   override func viewDidLoad() {
@@ -27,6 +29,8 @@ class HabitViewController: UIViewController {
     levelNumberLabel.text = "level " + String(habit.level)
     habitmonImage.image = UIImage(named: habit.image!)
     habitmonNameLabel.text = habit.habitmon
+    habitmonDescription.text = habit.profile
+    evolveLevelLabel.text = "Evolves at level " + String(habit.evolveLevel)
     }
 
     override func didReceiveMemoryWarning() {

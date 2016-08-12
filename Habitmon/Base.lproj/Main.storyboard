@@ -129,6 +129,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRb-f2-G5U">
+                                <rect key="frame" x="58" y="478" width="256" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf6-US-GPY">
+                                <rect key="frame" x="60" y="550" width="254" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -151,7 +163,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="evolveLevelLabel" destination="xf6-US-GPY" id="f5A-rS-Jw9"/>
                         <outlet property="habitNameLabel" destination="sEa-zz-b0b" id="gPe-lK-n4I"/>
+                        <outlet property="habitmonDescription" destination="DRb-f2-G5U" id="oLj-hb-HXL"/>
                         <outlet property="habitmonImage" destination="Y5q-Ra-TxH" id="mP1-8K-s6v"/>
                         <outlet property="habitmonNameLabel" destination="riE-QW-I5I" id="ckr-u6-5aj"/>
                         <outlet property="levelNumberLabel" destination="3Rv-tH-Ek1" id="d64-6Y-km4"/>
