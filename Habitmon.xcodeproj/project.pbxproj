@@ -10,6 +10,7 @@
 		925630B85CC1D207D0917664 /* Pods_HabitmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */; };
 		B302C6AD1D5CE6B800A784F3 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302C6AC1D5CE6B800A784F3 /* HabitTableViewController.swift */; };
 		B302C6B11D5D228A00A784F3 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302C6B01D5D228A00A784F3 /* HabitViewController.swift */; };
+		B302C6BA1D5E70A500A784F3 /* Checkmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302C6B91D5E70A500A784F3 /* Checkmark.swift */; };
 		B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */; };
 		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
 		B35ACC8F1D58F442007D3FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC8D1D58F442007D3FD7 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitmon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon.debug.xcconfig"; sourceTree = "<group>"; };
 		B302C6AC1D5CE6B800A784F3 /* HabitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
 		B302C6B01D5D228A00A784F3 /* HabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
+		B302C6B91D5E70A500A784F3 /* Checkmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkmark.swift; sourceTree = "<group>"; };
 		B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		B35ACC841D58F442007D3FD7 /* Habitmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35ACC871D58F442007D3FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				B35ACC951D58F442007D3FD7 /* Info.plist */,
 				B302C6AC1D5CE6B800A784F3 /* HabitTableViewController.swift */,
 				B302C6B01D5D228A00A784F3 /* HabitViewController.swift */,
+				B302C6B91D5E70A500A784F3 /* Checkmark.swift */,
 			);
 			path = Habitmon;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				B302C6AD1D5CE6B800A784F3 /* HabitTableViewController.swift in Sources */,
 				B38094721D594B450079C8D1 /* Habit.swift in Sources */,
 				B302C6B11D5D228A00A784F3 /* HabitViewController.swift in Sources */,
+				B302C6BA1D5E70A500A784F3 /* Checkmark.swift in Sources */,
 				B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */,
 				B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */,
 			);
