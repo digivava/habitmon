@@ -16,6 +16,7 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var habitNameLabel: UILabel!
   @IBOutlet weak var habitmonImage: UIImageView!
   @IBOutlet weak var levelNumberLabel: UILabel!
+  @IBOutlet weak var habitmonNameLabel: UILabel!
   
   
   override func viewDidLoad() {
@@ -23,8 +24,9 @@ class HabitViewController: UIViewController {
 
     // Do any additional setup after loading the view.
     habitNameLabel.text = habit.name
-    levelNumberLabel.text = String(habit.level)
+    levelNumberLabel.text = "level " + String(habit.level)
     habitmonImage.image = UIImage(named: habit.image!)
+    habitmonNameLabel.text = habit.habitmon
     }
 
     override func didReceiveMemoryWarning() {
