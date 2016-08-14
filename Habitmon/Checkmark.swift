@@ -33,6 +33,7 @@ class Checkmark: UIView {
   func checkboxTapped(checkbox: UIButton) {
     print("Ka-ching!")
     checkbox.selected = true
+//    Habit.levelUp()
   }
 
 }

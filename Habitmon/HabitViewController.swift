@@ -20,16 +20,28 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var habitmonDescription: UILabel!
   @IBOutlet weak var evolveLevelLabel: UILabel!
   
+  // property observer. is this 0 gonna get in the way somewhere?
+  var levelValue: Int = 0 {
+    didSet {
+      levelNumberLabel.text = "level \(levelValue)"
+    }
+  }
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
     habitNameLabel.text = habit.name
-    levelNumberLabel.text = "level " + String(habit.level)
     habitmonNameLabel.text = habit.habitmon
     habitmonImage.image = UIImage(named: habit.image!)
     habitmonDescription.text = habit.profile
+    
+    // connects to property observer so that it can update level number in real time
+    levelValue = habit.level
+    
+    
+    
     
 //    if habit.level < 5 {
 //      // egg
@@ -67,10 +79,6 @@ class HabitViewController: UIViewController {
     }
   }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
   
     // MARK: - Navigation
 

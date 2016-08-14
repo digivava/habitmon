@@ -33,7 +33,8 @@ class HabitTableViewController: UITableViewController {
     
     if realm.objects(Habit).count == 0 {
       try! realm.write {
-        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Egg", "image": "Egg", "evolution1": "Lollipup", "evolution2": "Sugpug", "evolution3": "Molassie", "active": true])
+        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "habitmon": "Egg", "level": 2, "image": "Egg", "evolution1": "Lollipup", "evolution2": "Sugpug", "evolution3": "Molassie", "active": true])
+        
 //        realm.create(Habit.self, value: ["id": 2, "name": "Floss", "habitmon1": "Plaqodile", "image1": "monkey"])
 //        realm.create(Habit.self, value: ["id": 3, "name": "Exercise for 15 min", "habitmon": "Musscle"])
       }

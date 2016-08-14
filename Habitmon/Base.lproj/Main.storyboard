@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-tH-Ek1">
-                                <rect key="frame" x="166" y="233" width="42" height="21"/>
+                                <rect key="frame" x="137" y="233" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -151,8 +151,8 @@
                             <constraint firstItem="spo-km-qKR" firstAttribute="top" secondItem="sEa-zz-b0b" secondAttribute="bottom" constant="563" id="5RG-v6-k3e"/>
                             <constraint firstItem="3Rv-tH-Ek1" firstAttribute="top" secondItem="oLT-Uw-iPc" secondAttribute="bottom" constant="13" id="Du2-pr-tim"/>
                             <constraint firstItem="Y5q-Ra-TxH" firstAttribute="centerX" secondItem="sEa-zz-b0b" secondAttribute="centerX" constant="-0.5" id="Egy-2y-Zar"/>
-                            <constraint firstItem="3Rv-tH-Ek1" firstAttribute="leading" secondItem="hLi-hD-6FU" secondAttribute="leadingMargin" constant="146" id="LmX-F5-jij"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Rv-tH-Ek1" secondAttribute="trailing" constant="147" id="T19-Q7-bZ1"/>
+                            <constraint firstItem="3Rv-tH-Ek1" firstAttribute="leading" secondItem="hLi-hD-6FU" secondAttribute="leadingMargin" constant="117" id="LmX-F5-jij"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Rv-tH-Ek1" secondAttribute="trailing" constant="118" id="T19-Q7-bZ1"/>
                             <constraint firstItem="riE-QW-I5I" firstAttribute="leading" secondItem="hLi-hD-6FU" secondAttribute="leadingMargin" constant="76" id="gOt-9t-QuB"/>
                             <constraint firstItem="riE-QW-I5I" firstAttribute="top" secondItem="Y5q-Ra-TxH" secondAttribute="bottom" constant="8" id="hC4-3g-ueF"/>
                             <constraint firstItem="oLT-Uw-iPc" firstAttribute="leading" secondItem="hLi-hD-6FU" secondAttribute="leadingMargin" constant="117" id="n2d-Bh-Wxn"/>
