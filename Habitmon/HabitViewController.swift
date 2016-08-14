@@ -20,10 +20,35 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var habitmonDescription: UILabel!
   @IBOutlet weak var evolveLevelLabel: UILabel!
   
-  // property observer. is this 0 gonna get in the way somewhere?
+  // property observers, for updating values in real time. need to do this with the picture soon too.
   var levelValue: Int = 0 {
     didSet {
       levelNumberLabel.text = "level \(levelValue)"
+    }
+  }
+  
+  var habitNameText: String = "" {
+    didSet {
+      habitNameLabel.text = "\(habitNameText)"
+    }
+  }
+  
+  var habitmonNameText: String = "" {
+    didSet {
+      habitmonNameLabel.text = "\(habitmonNameText)"
+    }
+  }
+  
+  var habitmonDescriptionText: String = "" {
+    didSet {
+      habitmonDescription.text = "\(habitmonDescriptionText)"
+    }
+  }
+  
+  
+  var habitmonImageView: UIImage! {
+    didSet {
+      habitmonImage.image = habitmonImageView
     }
   }
   
@@ -32,14 +57,13 @@ class HabitViewController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
-    habitNameLabel.text = habit.name
-    habitmonNameLabel.text = habit.habitmon
-    habitmonImage.image = UIImage(named: habit.image!)
-    habitmonDescription.text = habit.profile
     
     // connects to property observer so that it can update level number in real time
     levelValue = habit.level
-    
+    habitNameText = habit.name!
+    habitmonNameText = habit.habitmon!
+    habitmonDescriptionText = habit.profile!
+    habitmonImageView = UIImage(named: habit.image!)
     
     
     

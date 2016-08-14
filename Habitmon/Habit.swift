@@ -14,28 +14,28 @@ class Habit: Object {
   // MARK: Properties
   
   let id = RealmOptional<Int>()
-  dynamic var name: String?
+  dynamic var name: String? = ""
   dynamic var active: Bool = false
   dynamic var level: Int = 0
   dynamic var evolveLevel: Int = 5
   dynamic var cheatDays: Int = 3
   dynamic var checked: Bool = false
-  dynamic var category: String?
+  dynamic var category: String? = ""
   dynamic var createdAt = NSDate()
   dynamic var updatedAt = NSDate()
   
   // for the different evolutionary stages of the habitmon
-  dynamic var habitmon: String?
-  dynamic var image: String?
+  dynamic var habitmon: String? = ""
+  dynamic var image: String? = ""
   
   // okay so I guess arrays are hard in realm
 //  let evolutions = List<String>()
-  dynamic var evolution1: String?
-  dynamic var evolution2: String?
-  dynamic var evolution3: String?
-  dynamic var evolution4: String?
+  dynamic var evolution1: String? = ""
+  dynamic var evolution2: String? = ""
+  dynamic var evolution3: String? = ""
+  dynamic var evolution4: String? = ""
 
-  dynamic var profile: String?
+  dynamic var profile: String? = ""
   
 //  // makes the id the key
 //  override static func primaryKey() -> String? {
