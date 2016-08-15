@@ -106,22 +106,18 @@ class HabitViewController: UIViewController {
     }
     
     if habit.level == 5 {
-      //magic number for now, fix later
-//      evolveLevelLabel.text = "Evolves at level 15"
       try! realm.write {
         habit.habitmon = habit.evolution1
         habit.image = habit.evolution1
         habit.evolveLevel = habit.evolveLevel * 3
       }
     } else if habit.level == 15 {
-//      evolveLevelLabel.text = "Evolves at level 30"
       try! realm.write {
         habit.habitmon = habit.evolution2
         habit.image = habit.evolution2
         habit.evolveLevel = habit.evolveLevel * 2
       }
     } else if habit.level == 30 {
-//      evolveLevelLabel.text = "Evolves at level 60"
       try! realm.write {
         habit.habitmon = habit.evolution3
         habit.image = habit.evolution3
@@ -134,7 +130,7 @@ class HabitViewController: UIViewController {
 //      habit.image = habit.evolution4
 //    }
     
-    //update the labels
+    // update the labels
     levelValue = habit.level
     habitmonNameText = habit.habitmon!
     habitmonImageView = UIImage(named: habit.image!)
