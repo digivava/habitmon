@@ -42,8 +42,16 @@ class Habit: Object {
 //    return "id"
 //  }
   
-  func levelUp(habit: Habit) {
-    level += 1
+//  func levelUp() {
+//    
+//    let realm = try! Realm()
+//    
+//    try! realm.write {
+//      self.level += 1
+//    }
+  
+
+//    level += 1
     
 //    if level == 5 {
 //      habitmon = evolution1
@@ -58,6 +66,6 @@ class Habit: Object {
 //      habitmon = evolution4
 //      image = evolution4
 //    }
-  }
+//  }
   
 }
