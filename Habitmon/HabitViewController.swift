@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HabitViewController: UIViewController {
 
@@ -100,6 +101,14 @@ class HabitViewController: UIViewController {
     
     checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
     
+    let realm = try! Realm()
+    
+    try! realm.write {
+      habit.level += 1
+    }
+    
+    levelValue = habit.level
+  
   }
   
   
