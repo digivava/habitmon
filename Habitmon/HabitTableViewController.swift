@@ -62,6 +62,25 @@ class HabitTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if (editingStyle == UITableViewCellEditingStyle.Delete) {
+      // handle delete (by removing the data from your array and updating the tableview)
+      let habit = habits[indexPath.row]
+      
+      try! realm.write {
+        habit.active = false
+      }
+      
+      self.tableView.reloadData()
+      
+      print(habit.active)
+    }
+  }
+  
   // MARK: - Habit List Actions
   
 //  @IBAction func unwindToHabitList(sender: UIStoryboardSegue) {
