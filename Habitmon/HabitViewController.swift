@@ -82,13 +82,6 @@ class HabitViewController: UIViewController {
     habitmonDescriptionText = habit.profile!
     habitmonImageView = UIImage(named: habit.image!)
     evolveLevelText = habit.evolveLevel
-    
-    //to account for eggs hatching
-//    if habit.level < 5 {
-//      evolveLevelLabel.text = "Hatches at level " + String(habit.evolveLevel)
-//    } else {
-//      evolveLevelLabel.text = "Evolves at level " + String(habit.evolveLevel)
-//    }
   }
 
 

@@ -22,10 +22,6 @@ class HabitTableViewController: UITableViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
-    habits = realm.objects(Habit.self)
-    
-    
-    
     ///// TEMPORARY for seed data
     try! realm.write {
       realm.deleteAll()

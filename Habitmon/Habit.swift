@@ -18,14 +18,15 @@ class Habit: Object {
   dynamic var active: Bool = false
   dynamic var level: Int = 0
   dynamic var cheatDays: Int = 3
+  // use this once you implement a time restriction for the checkbox
   dynamic var checked: Bool = false
-  dynamic var category: String? = ""
+  dynamic var category: String? = "Other"
   dynamic var createdAt = NSDate()
   dynamic var updatedAt = NSDate()
   
   // for the different evolutionary stages of the habitmon
-  dynamic var habitmon: String? = ""
-  dynamic var image: String? = ""
+  dynamic var habitmon: String? = "Egg"
+  dynamic var image: String? = "Egg"
   
   // okay so I guess arrays are hard in realm
 //  let evolutions = List<String>()
@@ -39,7 +40,11 @@ class Habit: Object {
 //  dynamic var evolveLevel3: Int = 30
 //  dynamic var evolveLevel4: Int = 60
 
-  dynamic var profile: String? = ""
+  dynamic var profile: String? = "A mysterious egg. I wonder what's inside?"
+  dynamic var profile1: String? = ""
+  dynamic var profile2: String? = ""
+  dynamic var profile3: String? = ""
+  dynamic var profile4: String? = "Like its previous form except more shining, shimmering, splendid."
   
 //  // makes the id the key
 //  override static func primaryKey() -> String? {

@@ -81,12 +81,55 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Habits" id="qGk-iS-X1c">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zid-8b-72e"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zid-8b-72e">
+                            <connections>
+                                <segue destination="ljP-zk-1Gk" kind="presentation" id="vF6-6d-M84"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcf-QQ-AiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="668" y="-739"/>
+        </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="00E-dF-lpv">
+            <objects>
+                <tableViewController id="ljP-zk-1Gk" customClass="CategoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="VYA-Wu-d5F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="90" id="7Uc-pB-jAg" customClass="CategoryTableViewCell" customModule="Habitmon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Uc-pB-jAg" id="XGt-zQ-nt3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-kL-Ydg">
+                                            <rect key="frame" x="43" y="34" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="habitNameLabel" destination="zMy-kL-Ydg" id="drN-tJ-Ewx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ljP-zk-1Gk" id="fni-Vz-Aqb"/>
+                            <outlet property="delegate" destination="ljP-zk-1Gk" id="VVL-vv-wgr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqH-qs-SJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="-1491"/>
         </scene>
         <!--Habit View Controller-->
         <scene sceneID="YtC-Gi-sBv">
