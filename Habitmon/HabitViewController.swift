@@ -21,8 +21,6 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var habitmonDescription: UILabel!
   @IBOutlet weak var evolveLevelLabel: UILabel!
   @IBOutlet weak var checkboxButton: UIButton!
-
-  
   
   // property observers, for updating values in real time. need to do this with the picture soon too.
   var levelValue: Int = 0 {
@@ -85,18 +83,40 @@ class HabitViewController: UIViewController {
   // MARK: - Actions
 
   @IBAction func checkboxTapped(sender: UIButton) {
-    
+    // change to checked-off image of checkbox
     checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
     
+    // level-up related code.... this whole thing should be in its own method on the Model but I can't figure out how to connect to that right now so HERE WE ARE. GOTTA SHIP SHIP SHIP.
     let realm = try! Realm()
     
     try! realm.write {
       habit.level += 1
     }
     
+    //update the label
     levelValue = habit.level
-    print("WAHOO")
-    print(habit)
+    
+    if habit.level == 5 {
+      try! realm.write {
+        habit.habitmon = habit.evolution1
+        habit.image = habit.evolution1
+      }
+    } else if habit.level == 15 {
+      try! realm.write {
+        habit.habitmon = habit.evolution2
+        habit.image = habit.evolution2
+      }
+    } else if habit.level == 30 {
+      try! realm.write {
+        habit.habitmon = habit.evolution3
+        habit.image = habit.evolution3
+      }
+    }
+    // golden evolution form, for later if time
+//    } else if habit.level == 60 {
+//      habit.habitmon = habit.evolution4
+//      habit.image = habit.evolution4
+//    }
   }
   
   

@@ -27,9 +27,9 @@ class HabitTableViewController: UITableViewController {
     
     
     ///// TEMPORARY for seed data
-//    try! realm.write {
-//      realm.deleteAll()
-//    }
+    try! realm.write {
+      realm.deleteAll()
+    }
     
     
     
