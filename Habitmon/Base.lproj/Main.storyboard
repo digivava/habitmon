@@ -83,7 +83,7 @@
                     <navigationItem key="navigationItem" title="Your Habits" id="qGk-iS-X1c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zid-8b-72e">
                             <connections>
-                                <segue destination="ljP-zk-1Gk" kind="presentation" id="vF6-6d-M84"/>
+                                <segue destination="4it-Dg-GTV" kind="presentation" identifier="AddItem" id="vF6-6d-M84"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -92,24 +92,24 @@
             </objects>
             <point key="canvasLocation" x="668" y="-739"/>
         </scene>
-        <!--Category Table View Controller-->
+        <!--New Habit-->
         <scene sceneID="00E-dF-lpv">
             <objects>
-                <tableViewController id="ljP-zk-1Gk" customClass="CategoryTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="VYA-Wu-d5F">
+                <tableViewController id="ljP-zk-1Gk" customClass="CategoryTableViewController" customModule="Habitmon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="VYA-Wu-d5F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="90" id="7Uc-pB-jAg" customClass="CategoryTableViewCell" customModule="Habitmon" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="75" id="7Uc-pB-jAg" customClass="CategoryTableViewCell" customModule="Habitmon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Uc-pB-jAg" id="XGt-zQ-nt3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-kL-Ydg">
-                                            <rect key="frame" x="43" y="34" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="27" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -126,10 +126,17 @@
                             <outlet property="delegate" destination="ljP-zk-1Gk" id="VVL-vv-wgr"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="New Habit" id="htv-2G-De5">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Fzb-Sp-hS5">
+                            <connections>
+                                <action selector="cancel:" destination="ljP-zk-1Gk" id="jGh-fP-oRm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqH-qs-SJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-1491"/>
+            <point key="canvasLocation" x="2152" y="-1491"/>
         </scene>
         <!--Habit View Controller-->
         <scene sceneID="YtC-Gi-sBv">
@@ -239,6 +246,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZm-7D-j2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-144" y="-739"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kcg-7A-GXh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4it-Dg-GTV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W3g-b5-MdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ljP-zk-1Gk" kind="relationship" relationship="rootViewController" id="DHX-7e-kus"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFr-yF-wYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="-1491"/>
         </scene>
     </scenes>
     <resources>
