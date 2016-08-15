@@ -17,7 +17,6 @@ class Habit: Object {
   dynamic var name: String? = ""
   dynamic var active: Bool = false
   dynamic var level: Int = 0
-  dynamic var evolveLevel: Int = 5
   dynamic var cheatDays: Int = 3
   dynamic var checked: Bool = false
   dynamic var category: String? = ""
@@ -34,6 +33,11 @@ class Habit: Object {
   dynamic var evolution2: String? = ""
   dynamic var evolution3: String? = ""
   dynamic var evolution4: String? = ""
+  
+  dynamic var evolveLevel: Int = 5
+//  dynamic var evolveLevel2: Int = 15
+//  dynamic var evolveLevel3: Int = 30
+//  dynamic var evolveLevel4: Int = 60
 
   dynamic var profile: String? = ""
   

@@ -54,6 +54,17 @@ class HabitViewController: UIViewController {
     }
   }
   
+  var evolveLevelText: Int = 0 {
+    didSet {
+      //to account for eggs hatching
+      if habit.level < 5 {
+        evolveLevelLabel.text = "Hatches at level \(evolveLevelText)"
+      } else {
+        evolveLevelLabel.text = "Evolves at level \(evolveLevelText)"
+      }
+    }
+  }
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,13 +81,14 @@ class HabitViewController: UIViewController {
     habitmonNameText = habit.habitmon!
     habitmonDescriptionText = habit.profile!
     habitmonImageView = UIImage(named: habit.image!)
+    evolveLevelText = habit.evolveLevel
     
     //to account for eggs hatching
-    if habit.level < 5 {
-      evolveLevelLabel.text = "Hatches at level " + String(habit.evolveLevel)
-    } else {
-      evolveLevelLabel.text = "Evolves at level " + String(habit.evolveLevel)
-    }
+//    if habit.level < 5 {
+//      evolveLevelLabel.text = "Hatches at level " + String(habit.evolveLevel)
+//    } else {
+//      evolveLevelLabel.text = "Evolves at level " + String(habit.evolveLevel)
+//    }
   }
 
 
@@ -93,23 +105,27 @@ class HabitViewController: UIViewController {
       habit.level += 1
     }
     
-    //update the label
-    levelValue = habit.level
-    
     if habit.level == 5 {
+      //magic number for now, fix later
+//      evolveLevelLabel.text = "Evolves at level 15"
       try! realm.write {
         habit.habitmon = habit.evolution1
         habit.image = habit.evolution1
+        habit.evolveLevel = habit.evolveLevel * 3
       }
     } else if habit.level == 15 {
+//      evolveLevelLabel.text = "Evolves at level 30"
       try! realm.write {
         habit.habitmon = habit.evolution2
         habit.image = habit.evolution2
+        habit.evolveLevel = habit.evolveLevel * 2
       }
     } else if habit.level == 30 {
+//      evolveLevelLabel.text = "Evolves at level 60"
       try! realm.write {
         habit.habitmon = habit.evolution3
         habit.image = habit.evolution3
+        habit.evolveLevel = habit.evolveLevel * 2
       }
     }
     // golden evolution form, for later if time
@@ -117,6 +133,12 @@ class HabitViewController: UIViewController {
 //      habit.habitmon = habit.evolution4
 //      habit.image = habit.evolution4
 //    }
+    
+    //update the labels
+    levelValue = habit.level
+    habitmonNameText = habit.habitmon!
+    habitmonImageView = UIImage(named: habit.image!)
+    evolveLevelText = habit.evolveLevel
   }
   
   
