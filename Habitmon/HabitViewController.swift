@@ -82,19 +82,6 @@ class HabitViewController: UIViewController {
   }
 
 
-//func checkboxTapped(checkbox: UIButton) {
-//  print("Ka-ching!")
-//  checkbox.selected = true
-//  let realm = try! Realm()
-//  
-//  
-//  //    try! realm.write {
-//  //      habit.level += 1
-//  //    }
-//  
-//}
-
-
   // MARK: - Actions
 
   @IBAction func checkboxTapped(sender: UIButton) {
@@ -108,7 +95,8 @@ class HabitViewController: UIViewController {
     }
     
     levelValue = habit.level
-  
+    print("WAHOO")
+    print(habit)
   }
   
   
@@ -121,6 +109,13 @@ class HabitViewController: UIViewController {
 // override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //         //Get the new view controller using segue.destinationViewController.
 //         //Pass the selected object to the new view controller.
-//    }
+//    let name = habitNameText ?? ""
+//    let image = habit.image ?? ""
+//    let level = levelValue
+//    
+//    // Set the meal to be passed to MealListTableViewController after the unwind segue.
+//  habit = Habit(name: name, image: image, level: level)
+//  
+//  }
 
 }

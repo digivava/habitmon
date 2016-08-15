@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HabitTableViewCell: UITableViewCell {
   
@@ -15,8 +16,13 @@ class HabitTableViewCell: UITableViewCell {
   @IBOutlet weak var habitNameLabel: UILabel!
   @IBOutlet weak var levelNumberLabel: UILabel!
   
+  //why no wooooork
+  var levelValue: Int = 0 {
+    didSet {
+      levelNumberLabel.text = "level \(levelValue)"
+    }
+  }
   
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

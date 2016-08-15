@@ -16,9 +16,7 @@ class HabitTableViewController: UITableViewController {
   
   func loadHabits() {
     habits = try! Realm().objects(Habit).filter("active = true")
-    print(habits)
   }
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,10 +24,14 @@ class HabitTableViewController: UITableViewController {
     
     habits = realm.objects(Habit.self)
     
+    
+    
     ///// TEMPORARY for seed data
-    try! realm.write {
-      realm.deleteAll()
-    }
+//    try! realm.write {
+//      realm.deleteAll()
+//    }
+    
+    
     
     if realm.objects(Habit).count == 0 {
       try! realm.write {
@@ -44,9 +46,9 @@ class HabitTableViewController: UITableViewController {
     loadHabits()
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  override func viewWillAppear(animated: Bool) {
+    //so that the table data will refresh when the page is visited again
+    self.tableView.reloadData()
   }
   
   // MARK: Necessary Delegate Methods
@@ -71,16 +73,42 @@ class HabitTableViewController: UITableViewController {
     
     cell.habitNameLabel.text = habit.name
     cell.habitmonImage.image = UIImage(named: habit.image!)
-    cell.levelNumberLabel.text = String(habit.level)
+    cell.levelNumberLabel.text = "\(habit.level)"
     
     return cell
   }
   
   // MARK: - Habit List Actions
   
-  //  func populateHabitsList(realm: Realm) {
-  //    var userHabits = realm.objects(Habit.self).filter("status = 'active'")
-  //  }
+//  @IBAction func unwindToHabitList(sender: UIStoryboardSegue) {
+//    if let sourceViewController = sender.sourceViewController as? HabitViewController, habit = sourceViewController.habit {
+//      
+//      var unwindedHabit = Habit()
+//      
+//      if let selectedIndexPath = tableView.indexPathForSelectedRow { // User clicked on a row
+//        
+//        // Updating of the habit is done in HabitViewController
+//        
+//        tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+//      } else {
+//        // Add a new habit.
+//        let newIndexPath = NSIndexPath(forRow: Int(habits.count), inSection: 0)
+//        
+//        // Persist in database
+//        let realm = try! Realm()
+//        try! realm.write {
+//          
+//          unwindedHabit.name = habit.name
+//          unwindedHabit.level = habit.level
+//          unwindedHabit.image = habit.image
+//          
+////          realm.addObjects([unwindedHabit])
+//        }
+//        
+//        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+//      }
+//    }
+//  }
   
   // MARK: - Navigation
   
@@ -104,7 +132,25 @@ class HabitTableViewController: UITableViewController {
       }
     
     
-      }
+    }
+  
+//  @IBAction func unwindToHabitList(sender: UIStoryboardSegue) {
+//    if let sourceViewController = sender.sourceViewController as? HabitViewController, habit = sourceViewController.habit {
+//      //the following gets executed if an existing meal is being edited.
+//      if let selectedIndexPath = tableView.indexPathForSelectedRow {
+//        // Update an existing habit.
+//        habits[selectedIndexPath.row] = habit
+//        tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+//      } else {
+//        // Add a new habit.
+//        let newIndexPath = NSIndexPath(forRow: habits.count, inSection: 0)
+////        habits.append(habit)
+//        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+//      }
+//      
+//    }
+//  
+//  }
   
 }
 
