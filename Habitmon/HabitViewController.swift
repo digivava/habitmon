@@ -83,6 +83,25 @@ class HabitViewController: UIViewController {
     habitmonImageView = UIImage(named: habit.image!)
     evolveLevelText = habit.evolveLevel
   }
+  
+  func congratsPopup(level: Int) {
+    
+    let congratsAlert = UIAlertController(title: "Congratulations!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    if level == 5 {
+      congratsAlert.message = "Your egg has finally hatched! Keep working hard and your Habitmon will evolve!"
+    } else if level == 15 {
+      congratsAlert.message = "You're doing so well with your habit that your Habitmon just evolved! Keep it up!"
+    } else if level == 30 {
+      congratsAlert.message = "Incredible! You've done your habit for a whole month now! Your Habitmon and its previous evolutions will be added to the Collection."
+    }
+    
+    congratsAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+      print("Habitmon evolved.")
+    }))
+    
+    presentViewController(congratsAlert, animated: true, completion: nil)
+  }
 
 
   // MARK: - Actions
@@ -99,18 +118,21 @@ class HabitViewController: UIViewController {
     }
     
     if habit.level == 5 {
+      congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution1
         habit.image = habit.evolution1
         habit.evolveLevel = habit.evolveLevel * 3
       }
     } else if habit.level == 15 {
+      congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution2
         habit.image = habit.evolution2
         habit.evolveLevel = habit.evolveLevel * 2
       }
     } else if habit.level == 30 {
+      congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution3
         habit.image = habit.evolution3

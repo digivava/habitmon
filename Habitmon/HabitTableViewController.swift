@@ -71,7 +71,7 @@ class HabitTableViewController: UITableViewController {
       // handle delete (by removing the data from your array and updating the tableview)
       let habit = habits[indexPath.row]
       
-      let deletionAlert = UIAlertController(title: "Delete Habit", message: "Are you sure you want to delete this habit? This action cannot be undone.", preferredStyle: UIAlertControllerStyle.Alert)
+      let deletionAlert = UIAlertController(title: "Delete Habit", message: "Are you sure you want to remove this habit? This action cannot be undone.", preferredStyle: UIAlertControllerStyle.Alert)
       
       deletionAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
         try! self.realm.write {
