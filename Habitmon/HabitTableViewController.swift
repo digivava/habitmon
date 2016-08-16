@@ -82,7 +82,7 @@ class HabitTableViewController: UITableViewController {
       }))
       
       deletionAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
-        print("Handle Cancel Logic here")
+        self.tableView.reloadData()
       }))
       
       presentViewController(deletionAlert, animated: true, completion: nil)

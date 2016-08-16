@@ -254,6 +254,7 @@
 				TargetAttributes = {
 					B35ACC831D58F442007D3FD7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EHDUXUHGX5;
 					};
 					B35ACC991D58F443007D3FD7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -580,10 +581,13 @@
 			baseConfigurationReference = 8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Habitmon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VAL.Habitmon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -592,10 +596,13 @@
 			baseConfigurationReference = 4B3D9508C1DA12517F728523 /* Pods-Habitmon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Habitmon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VAL.Habitmon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
