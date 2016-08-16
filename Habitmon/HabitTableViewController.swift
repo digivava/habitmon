@@ -75,7 +75,16 @@ class HabitTableViewController: UITableViewController {
       
       deletionAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
         try! self.realm.write {
+          // almost like a fake initialization... because these values need to go back to how they were before, but because of the way our whole data model is structured, we can't just reinitialize it. oops haha. could have done that better.
           habit.active = false
+          habit.level = 0
+          habit.evolveLevel = 5
+          habit.checked = false
+          habit.cheatDays = 3
+          habit.habitmon = "Egg"
+          habit.image = "Egg"
+          habit.profile = "A mysterious egg. I wonder what's inside?"
+          habit.updatedAt = NSDate()
         }
         
         self.tableView.reloadData()

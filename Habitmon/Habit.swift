@@ -21,7 +21,6 @@ class Habit: Object {
   // use this once you implement a time restriction for the checkbox
   dynamic var checked: Bool = false
   dynamic var category: String? = "Other"
-  dynamic var createdAt = NSDate()
   dynamic var updatedAt = NSDate()
   
   // for the different evolutionary stages of the habitmon
