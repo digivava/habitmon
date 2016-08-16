@@ -90,11 +90,14 @@ class CategoryTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let habit = habits[indexPath.row]
     
+    // add habit to "your habits" list
     try! realm.write {
       habit.active = true
     }
     
+    // go back to "your habits" list
     dismissViewControllerAnimated(true, completion: nil)
+    
   }
 
     /*

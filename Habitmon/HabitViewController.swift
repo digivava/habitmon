@@ -70,10 +70,16 @@ class HabitViewController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    print("After loading page: checked? is \(habit.checked)")
+    // can't interact with checkbox if already has been checked
+    if habit.checked == true {
+      checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
+      checkboxButton.enabled = false
+    } else {
+      checkboxButton.setBackgroundImage(UIImage(named: "emptyCheckbox"), forState: UIControlState.Normal)
+    }
     
-    // set checkbox to its unchecked state
-    checkboxButton.setBackgroundImage(UIImage(named: "emptyCheckbox"), forState: UIControlState.Normal)
-    
+    print(UIControlState.Normal)
     
     // connects to property observer so that it can update level number in real time
     levelValue = habit.level
@@ -108,6 +114,7 @@ class HabitViewController: UIViewController {
 
   @IBAction func checkboxTapped(sender: UIButton) {
     // change to checked-off image of checkbox
+    // why is this not staying checked-off?
     checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
     
     // level-up related code.... this whole thing should be in its own method on the Model but I can't figure out how to connect to that right now so HERE WE ARE. GOTTA SHIP SHIP SHIP.
@@ -115,7 +122,10 @@ class HabitViewController: UIViewController {
     
     try! realm.write {
       habit.level += 1
+      habit.checked = true
     }
+    
+    print("After checking box: checked? is \(habit.checked)")
     
     if habit.level == 5 {
       congratsPopup(habit.level)
