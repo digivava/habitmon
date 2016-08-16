@@ -34,9 +34,6 @@ class CategoryTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print(realm.objects(Habit.self).count)
-    
-    
     if realm.objects(Habit.self).count == 0 {
       try! realm.write {
         realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "evolution1": "Lollipup", "evolution2": "Sugpug", "evolution3": "Molassie", "evolution4": "Golden Molassie", "profile1": "Happily feasts on all the sugar you aren't eating. Particularly enjoys smugly eating your favorites right next to you. But such a loyal and cuddly friend, you can't help but stay near it.", "profile2": "Hordes a stash of gooey, fresh-baked chocolate chip cookies in its doghouse and gets vicious if you try to snag any. Likes belly-rubs.", "profile3": "A powerful yet flighty spirit that rarely shows itself to humans. Legend says it comes only to those who prove themselves as truly self-disciplined.", "profile4": "Even more rare and ethereal than Molassie. Shimmers triumphantly, and is known to inspire angelic choruses of songs about golden tickets."])

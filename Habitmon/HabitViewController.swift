@@ -68,18 +68,23 @@ class HabitViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // get the difference between the current time and when user last checked the checkbox
+    let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
+    // convert to integer for easier handling
+    let duration = Int(elapsedTime)
 
-    // Do any additional setup after loading the view.
-    print("After loading page: checked? is \(habit.checked)")
-    // can't interact with checkbox if already has been checked
-    if habit.checked == true {
+    // the amount of seconds that the user must wait before they can check the checkbox again. in production this should be something like 12 hours, i.e. 43,200 secs. but "duration" is measured in seconds so for development a small number like 12 (seconds) is fine.
+    let waitingTime = 12
+
+    // user can't interact with checkbox if already has been checked within 12 hrs
+    if duration < waitingTime && habit.checked == true {
       checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
       checkboxButton.enabled = false
     } else {
       checkboxButton.setBackgroundImage(UIImage(named: "emptyCheckbox"), forState: UIControlState.Normal)
+      checkboxButton.enabled = true
     }
-    
-    print(UIControlState.Normal)
     
     // connects to property observer so that it can update level number in real time
     levelValue = habit.level
@@ -123,9 +128,8 @@ class HabitViewController: UIViewController {
     try! realm.write {
       habit.level += 1
       habit.checked = true
+      habit.updatedAt = NSDate()
     }
-    
-    print("After checking box: checked? is \(habit.checked)")
     
     if habit.level == 5 {
       congratsPopup(habit.level)
