@@ -35,7 +35,7 @@ class HabitTableViewController: UITableViewController {
     self.tableView.reloadData()
   }
   
-  // MARK: Necessary Delegate Methods
+  // MARK: TableView Delegate Methods
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
@@ -44,7 +44,7 @@ class HabitTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return habits.count
   }
-  
+
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     // Table view cells are reused and should be dequeued using a cell identifier.

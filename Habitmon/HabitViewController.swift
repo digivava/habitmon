@@ -75,7 +75,7 @@ class HabitViewController: UIViewController {
     let duration = Int(elapsedTime)
 
     // the amount of seconds that the user must wait before they can check the checkbox again. in production this should be something like 12 hours, i.e. 43,200 secs. but "duration" is measured in seconds so for development a small number like 12 (seconds) is fine.
-    let waitingTime = 12
+    let waitingTime = 0
 
     // user can't interact with checkbox if already has been checked within 12 hrs
     if duration < waitingTime && habit.checked == true {
@@ -164,6 +164,9 @@ class HabitViewController: UIViewController {
     habitmonNameText = habit.habitmon!
     habitmonImageView = UIImage(named: habit.image!)
     evolveLevelText = habit.evolveLevel
+    
+    // turn off checkbox
+    checkboxButton.enabled = false
   }
   
   
