@@ -137,6 +137,7 @@ class HabitViewController: UIViewController {
         habit.habitmon = habit.evolution1
         habit.image = habit.evolution1
         habit.evolveLevel = habit.evolveLevel * 3
+        habit.profile = habit.profile1
       }
     } else if habit.level == 15 {
       congratsPopup(habit.level)
@@ -144,6 +145,7 @@ class HabitViewController: UIViewController {
         habit.habitmon = habit.evolution2
         habit.image = habit.evolution2
         habit.evolveLevel = habit.evolveLevel * 2
+        habit.profile = habit.profile2
       }
     } else if habit.level == 30 {
       congratsPopup(habit.level)
@@ -151,18 +153,21 @@ class HabitViewController: UIViewController {
         habit.habitmon = habit.evolution3
         habit.image = habit.evolution3
         habit.evolveLevel = habit.evolveLevel * 2
+        habit.profile = habit.profile3
       }
     }
     // golden evolution form, for later if time
 //    } else if habit.level == 60 {
 //      habit.habitmon = habit.evolution4
 //      habit.image = habit.evolution4
+//      habit.profile = habit.profile4
 //    }
     
     // update the labels
     levelValue = habit.level
     habitmonNameText = habit.habitmon!
     habitmonImageView = UIImage(named: habit.image!)
+    habitmonDescriptionText = habit.profile!
     evolveLevelText = habit.evolveLevel
     
     // turn off checkbox

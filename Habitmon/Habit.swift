@@ -40,9 +40,9 @@ class Habit: Object {
 //  dynamic var evolveLevel4: Int = 60
 
   dynamic var profile: String? = "A mysterious egg. I wonder what's inside?"
-  dynamic var profile1: String? = ""
-  dynamic var profile2: String? = ""
-  dynamic var profile3: String? = ""
+  dynamic var profile1: String? = "A cute, lovable Habitmon."
+  dynamic var profile2: String? = "A bratty teenage Habitmon."
+  dynamic var profile3: String? = "A strong, majestic Habitmon."
   dynamic var profile4: String? = "Like its previous form except more shining, shimmering, splendid."
   
 //  // makes the id the key
