@@ -10,6 +10,8 @@
 		925630B85CC1D207D0917664 /* Pods_HabitmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2991C4E593CEE8591A167087 /* Pods_HabitmonTests.framework */; };
 		B302C6AD1D5CE6B800A784F3 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302C6AC1D5CE6B800A784F3 /* HabitTableViewController.swift */; };
 		B302C6B11D5D228A00A784F3 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302C6B01D5D228A00A784F3 /* HabitViewController.swift */; };
+		B31290E11D65084D003DFB55 /* CheatDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31290E01D65084D003DFB55 /* CheatDays.swift */; };
+		B31290E21D65084D003DFB55 /* CheatDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31290E01D65084D003DFB55 /* CheatDays.swift */; };
 		B32612FD1D62356E0003C86D /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */; };
 		B32613041D6235E20003C86D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32613031D6235E20003C86D /* CategoryTableViewCell.swift */; };
 		B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */; };
@@ -79,6 +81,7 @@
 		8C54AE368CC320EF62DEECE0 /* Pods-Habitmon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitmon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitmon/Pods-Habitmon.debug.xcconfig"; sourceTree = "<group>"; };
 		B302C6AC1D5CE6B800A784F3 /* HabitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
 		B302C6B01D5D228A00A784F3 /* HabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
+		B31290E01D65084D003DFB55 /* CheatDays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatDays.swift; sourceTree = "<group>"; };
 		B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B32613031D6235E20003C86D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 				B35ACC871D58F442007D3FD7 /* AppDelegate.swift */,
 				B38094711D594B450079C8D1 /* Habit.swift */,
 				B35ACC8D1D58F442007D3FD7 /* Main.storyboard */,
+				B31290E01D65084D003DFB55 /* CheatDays.swift */,
 				B32613031D6235E20003C86D /* CategoryTableViewCell.swift */,
 				B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */,
 				B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */,
@@ -443,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31290E11D65084D003DFB55 /* CheatDays.swift in Sources */,
 				B302C6AD1D5CE6B800A784F3 /* HabitTableViewController.swift in Sources */,
 				B38094721D594B450079C8D1 /* Habit.swift in Sources */,
 				B302C6B11D5D228A00A784F3 /* HabitViewController.swift in Sources */,
@@ -457,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31290E21D65084D003DFB55 /* CheatDays.swift in Sources */,
 				B35ACC9F1D58F443007D3FD7 /* HabitmonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

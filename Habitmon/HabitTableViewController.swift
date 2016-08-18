@@ -112,38 +112,6 @@ class HabitTableViewController: UITableViewController {
     }
   }
   
-  // MARK: - Habit List Actions
-  
-//  @IBAction func unwindToHabitList(sender: UIStoryboardSegue) {
-//    if let sourceViewController = sender.sourceViewController as? HabitViewController, habit = sourceViewController.habit {
-//      
-//      var unwindedHabit = Habit()
-//      
-//      if let selectedIndexPath = tableView.indexPathForSelectedRow { // User clicked on a row
-//        
-//        // Updating of the habit is done in HabitViewController
-//        
-//        tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
-//      } else {
-//        // Add a new habit.
-//        let newIndexPath = NSIndexPath(forRow: Int(habits.count), inSection: 0)
-//        
-//        // Persist in database
-//        let realm = try! Realm()
-//        try! realm.write {
-//          
-//          unwindedHabit.name = habit.name
-//          unwindedHabit.level = habit.level
-//          unwindedHabit.image = habit.image
-//          
-////          realm.addObjects([unwindedHabit])
-//        }
-//        
-//        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-//      }
-//    }
-//  }
-  
   // MARK: - Navigation
   
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -167,24 +135,6 @@ class HabitTableViewController: UITableViewController {
     
     
     }
-  
-//  @IBAction func unwindToHabitList(sender: UIStoryboardSegue) {
-//    if let sourceViewController = sender.sourceViewController as? HabitViewController, habit = sourceViewController.habit {
-//      //the following gets executed if an existing meal is being edited.
-//      if let selectedIndexPath = tableView.indexPathForSelectedRow {
-//        // Update an existing habit.
-//        habits[selectedIndexPath.row] = habit
-//        tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
-//      } else {
-//        // Add a new habit.
-//        let newIndexPath = NSIndexPath(forRow: habits.count, inSection: 0)
-////        habits.append(habit)
-//        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-//      }
-//      
-//    }
-//  
-//  }
   
 }
 

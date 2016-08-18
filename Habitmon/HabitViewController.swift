@@ -11,6 +11,7 @@ import RealmSwift
 
 class HabitViewController: UIViewController {
 
+  let realm = try! Realm()
   var habit: Habit!
   
   // MARK: - Properties
@@ -21,6 +22,7 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var habitmonDescription: UILabel!
   @IBOutlet weak var evolveLevelLabel: UILabel!
   @IBOutlet weak var checkboxButton: UIButton!
+  @IBOutlet weak var cheatHearts: UIImageView!
   
   // property observers, for updating values in real time. need to do this with the picture soon too.
   var levelValue: Int = 0 {
@@ -65,9 +67,17 @@ class HabitViewController: UIViewController {
     }
   }
   
+  var cheatDaysHearts: UIImage! {
+    didSet {
+      cheatHearts.image = cheatDaysHearts
+    }
+  }
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    print(cheatHearts.image)
     
     // get the difference between the current time and when user last checked the checkbox
     let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
@@ -93,6 +103,7 @@ class HabitViewController: UIViewController {
     habitmonDescriptionText = habit.profile!
     habitmonImageView = UIImage(named: habit.image!)
     evolveLevelText = habit.evolveLevel
+    cheatDaysHearts = UIImage(named: "hearts\(habit.cheatDays)")
   }
   
   func congratsPopup(level: Int) {
@@ -123,7 +134,7 @@ class HabitViewController: UIViewController {
     checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
     
     // level-up related code.... this whole thing should be in its own method on the Model but I can't figure out how to connect to that right now so HERE WE ARE. GOTTA SHIP SHIP SHIP.
-    let realm = try! Realm()
+//    let realm = try! Realm()
     
     try! realm.write {
       habit.level += 1
@@ -174,6 +185,16 @@ class HabitViewController: UIViewController {
     checkboxButton.enabled = false
   }
   
+  
+  @IBAction func useCheatButton(sender: UIButton) {
+    
+    try! realm.write {
+      habit.cheatDays -= 1
+    }
+    
+    // update image
+    cheatDaysHearts = UIImage(named: "hearts\(habit.cheatDays)")
+  }
   
 
   
