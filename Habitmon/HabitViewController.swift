@@ -23,6 +23,9 @@ class HabitViewController: UIViewController {
   @IBOutlet weak var evolveLevelLabel: UILabel!
   @IBOutlet weak var checkboxButton: UIButton!
   @IBOutlet weak var cheatHearts: UIImageView!
+  @IBOutlet weak var cheatDaysButton: UIButton!
+  
+  
   
   // property observers, for updating values in real time. need to do this with the picture soon too.
   var levelValue: Int = 0 {
@@ -165,7 +168,10 @@ class HabitViewController: UIViewController {
         habit.image = habit.evolution3
         habit.evolveLevel = habit.evolveLevel * 2
         habit.profile = habit.profile3
+        habit.cheatDays = 3
       }
+      // after 30 levels, cheat days are replenished
+      cheatDaysButton.enabled = true
     }
     // golden evolution form, for later if time
 //    } else if habit.level == 60 {
@@ -188,30 +194,19 @@ class HabitViewController: UIViewController {
   
   @IBAction func useCheatButton(sender: UIButton) {
     
-    try! realm.write {
-      habit.cheatDays -= 1
+    // only if the user has cheat days remaining for this habit
+    if habit.cheatDays >= 1 {
+      try! realm.write {
+        habit.cheatDays -= 1
+      }
+    }
+    
+    if habit.cheatDays == 0 {
+      cheatDaysButton.enabled = false
     }
     
     // update image
     cheatDaysHearts = UIImage(named: "hearts\(habit.cheatDays)")
   }
   
-
-  
-  // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
-// override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//         //Get the new view controller using segue.destinationViewController.
-//         //Pass the selected object to the new view controller.
-//    let name = habitNameText ?? ""
-//    let image = habit.image ?? ""
-//    let level = levelValue
-//    
-//    // Set the meal to be passed to MealListTableViewController after the unwind segue.
-//  habit = Habit(name: name, image: image, level: level)
-//  
-//  }
-
 }

@@ -269,6 +269,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cheatDaysButton" destination="0dv-HA-vVx" id="QBg-sj-T00"/>
                         <outlet property="cheatHearts" destination="4VX-GK-8F6" id="BjB-MR-1CL"/>
                         <outlet property="checkboxButton" destination="K9g-vM-0nz" id="x0T-93-zGK"/>
                         <outlet property="evolveLevelLabel" destination="xf6-US-GPY" id="f5A-rS-Jw9"/>
