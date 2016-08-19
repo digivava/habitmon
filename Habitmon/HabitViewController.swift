@@ -80,7 +80,7 @@ class HabitViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print(cheatHearts.image)
+    print(try! Realm().objects(Collection))
     
     // get the difference between the current time and when user last checked the checkbox
     let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
@@ -118,7 +118,7 @@ class HabitViewController: UIViewController {
     } else if level == 15 {
       congratsAlert.message = "You're doing so well with your habit that your Habitmon just evolved! Keep it up!"
     } else if level == 30 {
-      congratsAlert.message = "Incredible! You've done your habit for a whole month now! Your Habitmon and its previous evolutions will be added to the Collection."
+      congratsAlert.message = "You've done your habit for a whole month now! Your Habitmon and its previous evolutions will be added to the Collection."
     }
     
     congratsAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
@@ -169,8 +169,13 @@ class HabitViewController: UIViewController {
         habit.evolveLevel = habit.evolveLevel * 2
         habit.profile = habit.profile3
         habit.cheatDays = 3
-      }
-      // after 30 levels, cheat days are replenished
+        
+        // add this habit to the Collection
+        realm.create(Collection.self, value: ["name": "\(habit.name)", "category": "\(habit.category)", "evolution1": "\(habit.evolution1)", "evolution2": "\(habit.evolution2)", "evolution3": "\(habit.evolution3)", "profile1": "\(habit.profile1)", "profile2": "\(habit.profile2)", "profile3": "\(habit.profile3)"])
+        
+        }
+      
+      // every 30 levels, cheat days are replenished
       cheatDaysButton.enabled = true
     }
     // golden evolution form, for later if time
@@ -178,6 +183,8 @@ class HabitViewController: UIViewController {
 //      habit.habitmon = habit.evolution4
 //      habit.image = habit.evolution4
 //      habit.profile = habit.profile4
+    
+    // create a new instance in Collection, just of Golden habitmon
 //    }
     
     // update the labels
@@ -227,10 +234,6 @@ class HabitViewController: UIViewController {
       
       presentViewController(noMoreCheatsAlert, animated: true, completion: nil)
     }
-    
-//    if habit.cheatDays == 0 {
-//      cheatDaysButton.enabled = false
-//    }
     
     // update image
     cheatDaysHearts = UIImage(named: "hearts\(habit.cheatDays)")
