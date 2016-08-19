@@ -278,9 +278,11 @@
                         <outlet property="habitmonImage" destination="Y5q-Ra-TxH" id="mP1-8K-s6v"/>
                         <outlet property="habitmonNameLabel" destination="riE-QW-I5I" id="ckr-u6-5aj"/>
                         <outlet property="levelNumberLabel" destination="3Rv-tH-Ek1" id="d64-6Y-km4"/>
+                        <segue destination="g3F-iE-nop" kind="unwind" identifier="unwindToHabits" unwindAction="unwindToHabits:" id="sPT-iV-fhk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md2-Ky-S0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="g3F-iE-nop" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1377" y="-739"/>
         </scene>

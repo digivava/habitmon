@@ -129,12 +129,11 @@ class HabitTableViewController: UITableViewController {
           habitDetailViewController.habit = selectedHabit
         }
       }
-        
-      else if segue.identifier == "AddItem" {
-      }
-    
-    
     }
+  
+  @IBAction func unwindToHabits(segue: UIStoryboardSegue) {
+    
+  }
   
 }
 

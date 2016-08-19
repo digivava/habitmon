@@ -199,11 +199,38 @@ class HabitViewController: UIViewController {
       try! realm.write {
         habit.cheatDays -= 1
       }
+    } else {
+      let noMoreCheatsAlert = UIAlertController(title: "Out Of Cheat Days", message: "Sorry, but you have used all your cheat days for this month. This habit will be deleted and you must hatch it again.", preferredStyle: UIAlertControllerStyle.Alert)
+      
+      noMoreCheatsAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+        // reset habit to its original state
+        try! self.realm.write {
+          self.habit.active = false
+          self.habit.level = 0
+          self.habit.evolveLevel = 5
+          self.habit.checked = false
+          self.habit.cheatDays = 3
+          self.habit.habitmon = "Egg"
+          self.habit.image = "Egg"
+          self.habit.profile = "A mysterious egg. I wonder what's inside?"
+          self.habit.updatedAt = NSDate()
+        }
+        
+        // force segue back to table view?
+        self.performSegueWithIdentifier("unwindToHabits", sender: self)
+        
+      }))
+      
+      noMoreCheatsAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+        print("Oops, didn't mean to click that.")
+      }))
+      
+      presentViewController(noMoreCheatsAlert, animated: true, completion: nil)
     }
     
-    if habit.cheatDays == 0 {
-      cheatDaysButton.enabled = false
-    }
+//    if habit.cheatDays == 0 {
+//      cheatDaysButton.enabled = false
+//    }
     
     // update image
     cheatDaysHearts = UIImage(named: "hearts\(habit.cheatDays)")
