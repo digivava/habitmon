@@ -76,7 +76,7 @@ class CollectionCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionCollectionViewCell
     
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-          cell.name.text = habitmon.name
+          cell.name.text = habitmon.habitmon
         cell.backgroundColor = UIColor.grayColor() // make cell more visible in our example project
       
         return cell
