@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let reuseIdentifier = "Cell"
 
 class CollectionCollectionViewController: UICollectionViewController {
+  
+  var habitmons: Results<Habit>!
 
   // for tab bar.. this isn't working yet though
   required init?(coder aDecoder: NSCoder) {
@@ -27,10 +30,15 @@ class CollectionCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         // Do any additional setup after loading the view.
+    
+    
+//        let nib = UINib(nibName: "UICollectionElementKindCell", bundle:nil)
+//        self.collectionView!.registerNib(nib, forCellWithReuseIdentifier: "CollectionCollectionViewCell")
+    
+//        collectionView!.registerClass(NSClassFromString("CollectionCollectionViewCell"),forCellWithReuseIdentifier: "cell")
+    
+        habitmons = try! Realm().objects(Habit)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,22 +60,32 @@ class CollectionCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return habitmons.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+      
+        let habitmon = habitmons[indexPath.item]
+      
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionCollectionViewCell
     
-        // Configure the cell
-    
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+          cell.name.text = habitmon.name
+        cell.backgroundColor = UIColor.grayColor() // make cell more visible in our example project
+      
         return cell
     }
+  
+      override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
+      }
 
     // MARK: UICollectionViewDelegate
 

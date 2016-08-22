@@ -26,6 +26,7 @@
 		B38094731D594DCA0079C8D1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B354AEB81D5945F10084AE80 /* Realm.framework */; };
 		B38094741D594DCA0079C8D1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B354AEBA1D5945F10084AE80 /* RealmSwift.framework */; };
 		B39F7B751D6B7A85004BBD9C /* CollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39F7B741D6B7A85004BBD9C /* CollectionCollectionViewController.swift */; };
+		B39F7B801D6B947F004BBD9C /* CollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39F7B7F1D6B947F004BBD9C /* CollectionCollectionViewCell.swift */; };
 		B3AD3F911D593C8A0096CDDE /* Pods_Habitmon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AD3F8C1D593C650096CDDE /* Pods_Habitmon.framework */; };
 		D9C7DF19C047D997E7DE2C1A /* Pods_Habitmon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1309D276C8F9DE7DCB498A87 /* Pods_Habitmon.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		B35ACCA01D58F443007D3FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38094711D594B450079C8D1 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		B39F7B741D6B7A85004BBD9C /* CollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		B39F7B7F1D6B947F004BBD9C /* CollectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3AD3F851D593C650096CDDE /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				B35ACC951D58F442007D3FD7 /* Info.plist */,
 				B302C6AC1D5CE6B800A784F3 /* HabitTableViewController.swift */,
 				B302C6B01D5D228A00A784F3 /* HabitViewController.swift */,
+				B39F7B7F1D6B947F004BBD9C /* CollectionCollectionViewCell.swift */,
 			);
 			path = Habitmon;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				B31290E11D65084D003DFB55 /* CheatDays.swift in Sources */,
 				B302C6AD1D5CE6B800A784F3 /* HabitTableViewController.swift in Sources */,
 				B38094721D594B450079C8D1 /* Habit.swift in Sources */,
+				B39F7B801D6B947F004BBD9C /* CollectionCollectionViewCell.swift in Sources */,
 				B302C6B11D5D228A00A784F3 /* HabitViewController.swift in Sources */,
 				B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */,
 				B32613041D6235E20003C86D /* CategoryTableViewCell.swift in Sources */,
