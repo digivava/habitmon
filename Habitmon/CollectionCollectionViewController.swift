@@ -11,7 +11,7 @@ import RealmSwift
 
 private let reuseIdentifier = "Cell"
 
-class CollectionCollectionViewController: UICollectionViewController {
+class CollectionCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   var habitmons: Results<Habit>!
 
@@ -31,12 +31,6 @@ class CollectionCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
-    
-    
-//        let nib = UINib(nibName: "UICollectionElementKindCell", bundle:nil)
-//        self.collectionView!.registerNib(nib, forCellWithReuseIdentifier: "CollectionCollectionViewCell")
-    
-//        collectionView!.registerClass(NSClassFromString("CollectionCollectionViewCell"),forCellWithReuseIdentifier: "cell")
     
         habitmons = try! Realm().objects(Habit)
     }
@@ -76,8 +70,9 @@ class CollectionCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionCollectionViewCell
     
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-          cell.name.text = habitmon.habitmon
-        cell.backgroundColor = UIColor.grayColor() // make cell more visible in our example project
+        cell.name.text = habitmon.habitmon
+        cell.habitmonImage.image = UIImage(named: habitmon.image!)
+        cell.backgroundColor = UIColor.lightGrayColor() // make cell more visible in our example project
       
         return cell
     }
@@ -117,5 +112,7 @@ class CollectionCollectionViewController: UICollectionViewController {
     
     }
     */
+  
+  
 
 }

@@ -11,6 +11,7 @@ import UIKit
 class CollectionCollectionViewCell: UICollectionViewCell {
   
   @IBOutlet weak var name: UILabel!
+  @IBOutlet weak var habitmonImage: UIImageView!
     
   
 }
