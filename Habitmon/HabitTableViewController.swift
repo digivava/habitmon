@@ -14,6 +14,14 @@ class HabitTableViewController: UITableViewController {
   let realm = try! Realm()
   var habits: Results<Habit>!
   
+  // for setting up the tab bar
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    
+    // Initialize Tab Bar Item
+    tabBarItem = UITabBarItem(title: "Habits", image: UIImage(named: "HabitsIcon"), tag: 1)
+  }
+  
   func loadHabits() {
     habits = try! Realm().objects(Habit).filter("active = true")
   }
@@ -23,9 +31,9 @@ class HabitTableViewController: UITableViewController {
     // Do any additional setup after loading the view, typically from a nib.
     
     ///// TEMPORARY for seed data
-    try! realm.write {
-      realm.deleteAll()
-    }
+//    try! realm.write {
+//      realm.deleteAll()
+//    }
     
     loadHabits()
   }
