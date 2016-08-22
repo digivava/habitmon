@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class CollectionCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
-  var habitmons: Results<Habit>!
+  var habitmons: Results<Collection>!
 
   // for tab bar.. this isn't working yet though
   required init?(coder aDecoder: NSCoder) {
@@ -32,7 +32,8 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
 
         // Do any additional setup after loading the view.
     
-        habitmons = try! Realm().objects(Habit)
+        habitmons = try! Realm().objects(Collection)
+        print(habitmons)
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +71,7 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionCollectionViewCell
     
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.name.text = habitmon.habitmon
+        cell.name.text = habitmon.name
         cell.habitmonImage.image = UIImage(named: habitmon.image!)
         cell.backgroundColor = UIColor.lightGrayColor() // make cell more visible in our example project
       

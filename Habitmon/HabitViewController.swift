@@ -80,8 +80,6 @@ class HabitViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print(try! Realm().objects(Collection))
-    
     // get the difference between the current time and when user last checked the checkbox
     let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
     // convert to integer for easier handling
@@ -170,10 +168,14 @@ class HabitViewController: UIViewController {
         habit.profile = habit.profile3
         habit.cheatDays = 3
         
-        // add this habit to the Collection
-        realm.create(Collection.self, value: ["name": "\(habit.name)", "category": "\(habit.category)", "evolution1": "\(habit.evolution1)", "evolution2": "\(habit.evolution2)", "evolution3": "\(habit.evolution3)", "profile1": "\(habit.profile1)", "profile2": "\(habit.profile2)", "profile3": "\(habit.profile3)"])
+        // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
+        realm.create(Collection.self, value: ["name": "\(habit.evolution1)", "habit": "\(habit.name)", "category": "\(habit.category)", "image": "\(habit.evolution1)", "profile": "\(habit.profile1)"])
         
-        }
+        realm.create(Collection.self, value: ["name": "\(habit.evolution2)", "habit": "\(habit.name)", "category": "\(habit.category)", "image": "\(habit.evolution2)", "profile": "\(habit.profile2)"])
+        
+        realm.create(Collection.self, value: ["name": "\(habit.evolution3)", "habit": "\(habit.name)", "category": "\(habit.category)", "image": "\(habit.evolution3)", "profile": "\(habit.profile3)"])
+        
+      }
       
       // every 30 levels, cheat days are replenished
       cheatDaysButton.enabled = true

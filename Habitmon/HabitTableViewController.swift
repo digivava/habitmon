@@ -103,20 +103,6 @@ class HabitTableViewController: UITableViewController {
       }))
       
       presentViewController(deletionAlert, animated: true, completion: nil)
-      
-      
-      
-      
-      
-      
-      
-//      try! realm.write {
-//        habit.active = false
-//      }
-//      
-//      self.tableView.reloadData()
-      
-      print(habit.active)
     }
   }
   
