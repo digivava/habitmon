@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Your Habits-->
+        <!--Current Habits-->
         <scene sceneID="6Yk-cx-c0G">
             <objects>
                 <tableViewController id="FV5-ZO-VrX" customClass="HabitTableViewController" customModule="Habitmon" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                             <outlet property="delegate" destination="FV5-ZO-VrX" id="yGH-gw-GJf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Habits" id="qGk-iS-X1c">
+                    <navigationItem key="navigationItem" title="Current Habits" id="qGk-iS-X1c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zid-8b-72e">
                             <connections>
                                 <segue destination="4it-Dg-GTV" kind="presentation" identifier="AddItem" id="vF6-6d-M84"/>
@@ -104,14 +104,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="S4L-1U-4c9" kind="relationship" relationship="viewControllers" id="tLa-0O-N0e"/>
-                        <segue destination="KB4-BL-9wE" kind="relationship" relationship="viewControllers" id="Z32-rR-vF4"/>
+                        <segue destination="hKK-IE-aiQ" kind="relationship" relationship="viewControllers" id="Z32-rR-vF4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWe-Xc-NhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-860" y="-739"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="nBu-Tf-S0S">
             <objects>
                 <collectionViewController id="KB4-BL-9wE" customClass="CollectionCollectionViewController" customModule="Habitmon" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="enn-cU-ydx" customClass="CollectionCollectionViewCell" customModule="Habitmon">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -152,11 +152,11 @@
                             <outlet property="delegate" destination="KB4-BL-9wE" id="BiO-rS-Hxk"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ghp-Um-hvW"/>
+                    <navigationItem key="navigationItem" title="Collection" id="Rua-Ny-lPh"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwx-pl-UVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144" y="32"/>
+            <point key="canvasLocation" x="668" y="20"/>
         </scene>
         <!--New Habit-->
         <scene sceneID="00E-dF-lpv">
@@ -387,6 +387,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFr-yF-wYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1340" y="-1491"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="zli-Yb-0P2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hKK-IE-aiQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ghp-Um-hvW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KxU-wg-loc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KB4-BL-9wE" kind="relationship" relationship="rootViewController" id="ZKs-rX-3rx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0h7-j1-ls4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144" y="20"/>
         </scene>
     </scenes>
     <resources>
