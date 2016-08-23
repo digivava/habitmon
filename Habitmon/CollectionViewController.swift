@@ -14,10 +14,19 @@ class CollectionViewController: UIViewController {
   let realm = try! Realm()
   var habitmon: Collection!
 
+  @IBOutlet weak var habitmonImage: UIImageView!
+  @IBOutlet weak var habitmonName: UILabel!
+  @IBOutlet weak var habitmonDescription: UILabel!
+  
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      habitmonImage.image = UIImage(named: habitmon.image)
+      habitmonName.text = habitmon.name
+      habitmonDescription.text = habitmon.profile
     }
 
     override func didReceiveMemoryWarning() {
