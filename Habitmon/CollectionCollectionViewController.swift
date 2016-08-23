@@ -13,9 +13,19 @@ private let reuseIdentifier = "Cell"
 
 class CollectionCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
+  let realm = try! Realm()
   var habitmons: Results<Collection>!
+  
+  // definitely refactor this later
+  
+  var headers = ["Golden Habitmon collected: \(try! Realm().objects(Collection).filter("name BEGINSWITH 'Golden'").count)/\(try! Realm().objects(Habit).count)", "Habitmon collected: \(try! Realm().objects(Collection).count)/\(try! Realm().objects(Habit).count * 3)"]
+  
+//  var headers: [String] {
+//    didSet {
+//      headers = ["Golden Habitmon collected: \(try! Realm().objects(Collection).filter("name BEGINSWITH 'Golden'").count)/\(try! Realm().objects(Habit).count)", "Habitmon collected: \(try! Realm().objects(Collection).count)/\(try! Realm().objects(Habit).count * 3)"]
+//    }
+//  }
 
-  // for tab bar.. this isn't working yet though
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
@@ -32,7 +42,7 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
 
         // Do any additional setup after loading the view.
     
-        habitmons = try! Realm().objects(Collection)
+        habitmons = realm.objects(Collection)
         print(habitmons)
     }
   
@@ -102,7 +112,8 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as! SectionHeaderCollectionReusableView
         
         // multiplied by 3 to account for 3 habitmon per habit
-        header.headerLabel.text = "Habitmon collected: \(habitmons.count)/\(try! Realm().objects(Habit).count * 3)"
+//        header.headerLabel.text = headers[1]
+          header.headerLabel.text = "Habitmon collected: \(realm.objects(Collection).count)/\(realm.objects(Habit).count * 3)"
         
         return header
       }

@@ -16,7 +16,7 @@ class HabitTableViewCell: UITableViewCell {
   @IBOutlet weak var habitNameLabel: UILabel!
   @IBOutlet weak var levelNumberLabel: UILabel!
   
-  //why no wooooork
+  
   var levelValue: Int = 0 {
     didSet {
       levelNumberLabel.text = "level \(levelValue)"
