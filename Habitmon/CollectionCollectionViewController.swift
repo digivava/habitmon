@@ -51,7 +51,7 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
        let detailsVC = segue.destinationViewController as! CollectionViewController
        let cell = sender as! CollectionCollectionViewCell
        let indexPaths = self.collectionView!.indexPathForCell(cell)
-       var thisHabitmon = self.habitmons[indexPaths!.row] as Collection
+       let thisHabitmon = self.habitmons[indexPaths!.row] as Collection
        detailsVC.habitmon = thisHabitmon
        
        }

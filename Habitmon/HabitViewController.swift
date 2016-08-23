@@ -169,12 +169,16 @@ class HabitViewController: UIViewController {
         habit.profile = habit.profile3
         habit.cheatDays = 3
         
-        // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
-        realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
         
-        realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
-        
-        realm.create(Collection.self, value: ["name": "\(habit.evolution3!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution3!)", "profile": "\(habit.profile3!)"])
+        //if this habitmon chain does not already exist in the Collection
+        if realm.objects(Collection).filter("habit = \"" + habit.name! + "\"").count == 0 {
+          // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
+          realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
+          
+          realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
+          
+          realm.create(Collection.self, value: ["name": "\(habit.evolution3!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution3!)", "profile": "\(habit.profile3!)"])
+        }
         
       }
       
