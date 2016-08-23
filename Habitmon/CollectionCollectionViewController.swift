@@ -35,6 +35,11 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
         habitmons = try! Realm().objects(Collection)
         print(habitmons)
     }
+  
+  override func viewWillAppear(animated: Bool) {
+    //so that the table data will refresh when the page is visited again
+    self.collectionView!.reloadData()
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
