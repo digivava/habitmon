@@ -41,18 +41,25 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+  
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     
+       if segue.identifier == "Show" {
+       
+       let detailsVC = segue.destinationViewController as! CollectionViewController
+       let cell = sender as! CollectionCollectionViewCell
+       let indexPaths = self.collectionView!.indexPathForCell(cell)
+       var thisHabitmon = self.habitmons[indexPaths!.row] as Collection
+       detailsVC.habitmon = thisHabitmon
+       
+       }
+     
+     }
 
     // MARK: UICollectionViewDataSource
-
+  
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

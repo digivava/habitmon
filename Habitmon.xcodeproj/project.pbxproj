@@ -16,6 +16,7 @@
 		B31290F31D67B731003DFB55 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31290F11D67B731003DFB55 /* Collection.swift */; };
 		B32612FD1D62356E0003C86D /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */; };
 		B32613041D6235E20003C86D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32613031D6235E20003C86D /* CategoryTableViewCell.swift */; };
+		B32B99071D6CCA1E0057F2D2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B99061D6CCA1D0057F2D2 /* CollectionViewController.swift */; };
 		B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */; };
 		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
 		B35ACC8F1D58F442007D3FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC8D1D58F442007D3FD7 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		B31290F11D67B731003DFB55 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B32613031D6235E20003C86D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		B32B99061D6CCA1D0057F2D2 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		B35ACC841D58F442007D3FD7 /* Habitmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35ACC871D58F442007D3FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				B38094711D594B450079C8D1 /* Habit.swift */,
 				B31290F11D67B731003DFB55 /* Collection.swift */,
 				B39F7B741D6B7A85004BBD9C /* CollectionCollectionViewController.swift */,
+				B32B99061D6CCA1D0057F2D2 /* CollectionViewController.swift */,
 				B35ACC8D1D58F442007D3FD7 /* Main.storyboard */,
 				B31290E01D65084D003DFB55 /* CheatDays.swift */,
 				B32613031D6235E20003C86D /* CategoryTableViewCell.swift */,
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32B99071D6CCA1E0057F2D2 /* CollectionViewController.swift in Sources */,
 				B39F7B751D6B7A85004BBD9C /* CollectionCollectionViewController.swift in Sources */,
 				B31290F21D67B731003DFB55 /* Collection.swift in Sources */,
 				B31290E11D65084D003DFB55 /* CheatDays.swift in Sources */,
