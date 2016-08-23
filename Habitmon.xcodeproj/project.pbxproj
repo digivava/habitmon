@@ -17,6 +17,7 @@
 		B32612FD1D62356E0003C86D /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */; };
 		B32613041D6235E20003C86D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32613031D6235E20003C86D /* CategoryTableViewCell.swift */; };
 		B32B99071D6CCA1E0057F2D2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B99061D6CCA1D0057F2D2 /* CollectionViewController.swift */; };
+		B32B99101D6CF4540057F2D2 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B990F1D6CF4540057F2D2 /* SectionHeaderCollectionReusableView.swift */; };
 		B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */; };
 		B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35ACC871D58F442007D3FD7 /* AppDelegate.swift */; };
 		B35ACC8F1D58F442007D3FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35ACC8D1D58F442007D3FD7 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B32613031D6235E20003C86D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		B32B99061D6CCA1D0057F2D2 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		B32B990F1D6CF4540057F2D2 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		B34D90041D5BC53500D1E387 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		B35ACC841D58F442007D3FD7 /* Habitmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35ACC871D58F442007D3FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				B39F7B741D6B7A85004BBD9C /* CollectionCollectionViewController.swift */,
 				B32B99061D6CCA1D0057F2D2 /* CollectionViewController.swift */,
 				B35ACC8D1D58F442007D3FD7 /* Main.storyboard */,
+				B32B990F1D6CF4540057F2D2 /* SectionHeaderCollectionReusableView.swift */,
 				B31290E01D65084D003DFB55 /* CheatDays.swift */,
 				B32613031D6235E20003C86D /* CategoryTableViewCell.swift */,
 				B32612FC1D62356E0003C86D /* CategoryTableViewController.swift */,
@@ -470,6 +473,7 @@
 				B302C6B11D5D228A00A784F3 /* HabitViewController.swift in Sources */,
 				B34D90051D5BC53500D1E387 /* HabitTableViewCell.swift in Sources */,
 				B32613041D6235E20003C86D /* CategoryTableViewCell.swift in Sources */,
+				B32B99101D6CF4540057F2D2 /* SectionHeaderCollectionReusableView.swift in Sources */,
 				B35ACC881D58F442007D3FD7 /* AppDelegate.swift in Sources */,
 				B32612FD1D62356E0003C86D /* CategoryTableViewController.swift in Sources */,
 			);

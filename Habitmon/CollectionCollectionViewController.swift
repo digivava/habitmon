@@ -94,6 +94,18 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
       }
+  
+      //provides section header
+      override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> SectionHeaderCollectionReusableView
+      {
+        
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as! SectionHeaderCollectionReusableView
+        
+        // multiplied by 3 to account for 3 habitmon per habit
+        header.headerLabel.text = "Habitmon collected: \(habitmons.count)/\(try! Realm().objects(Habit).count * 3)"
+        
+        return header
+      }
 
     // MARK: UICollectionViewDelegate
 
