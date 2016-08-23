@@ -16,6 +16,7 @@ class CollectionViewController: UIViewController {
 
   @IBOutlet weak var habitmonImage: UIImageView!
   @IBOutlet weak var habitmonName: UILabel!
+  @IBOutlet weak var dateAdded: UILabel!
   @IBOutlet weak var habitmonDescription: UILabel!
   
   
@@ -27,6 +28,15 @@ class CollectionViewController: UIViewController {
       habitmonImage.image = UIImage(named: habitmon.image)
       habitmonName.text = habitmon.name
       habitmonDescription.text = habitmon.profile
+      
+      // get just the year from the createdAt date
+      let calendar = NSCalendar.currentCalendar()
+      let components = calendar.components([.Day , .Month , .Year], fromDate: habitmon.createdAt)
+      
+      let month = components.month
+      let day = components.day
+      let year =  components.year
+      dateAdded.text = "You completed this habit on \(month)-\(day)-\(year)."
     }
 
     override func didReceiveMemoryWarning() {
