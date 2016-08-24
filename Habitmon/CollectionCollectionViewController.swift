@@ -11,10 +11,11 @@ import RealmSwift
 
 private let reuseIdentifier = "Cell"
 
-class CollectionCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class CollectionCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   
   let realm = try! Realm()
   var habitmons: Results<Collection>!
+  @IBOutlet weak var collectionView: UICollectionView!
   
   // definitely refactor this later
   
@@ -75,18 +76,18 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
 
     // MARK: UICollectionViewDataSource
   
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return habitmons.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
         let habitmon = habitmons[indexPath.item]
       
@@ -100,13 +101,13 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
         return cell
     }
   
-      override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+      func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
       }
   
       //provides section header
-      override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> SectionHeaderCollectionReusableView
+      func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
       {
         
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as! SectionHeaderCollectionReusableView
