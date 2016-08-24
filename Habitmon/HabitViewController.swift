@@ -130,6 +130,16 @@ class HabitViewController: UIViewController {
     
     if level == 1 {
       ribbonAlert.message = "Starting off strong! You received a ribbon for your efforts."
+    } else if level == 3 {
+      ribbonAlert.message = "Just a couple more days of successful habiting and your egg will hatch!"
+    } else if level == 7 {
+      ribbonAlert.message = "You've done your habit for a whole week now! Your Habitmon licks you lovingly."
+    } else if level == 10 {
+      ribbonAlert.message = "It's been 10 days since you started this habit. 5 more days and your Habitmon will evolve!"
+    } else if level == 20 {
+      ribbonAlert.message = "You've been doing this habit for 20 days! Your Habitmon looks happy!"
+    } else if level == 25 {
+      ribbonAlert.message = "Your Habitmon takes a nap on your head. It's very comfortable around you."
     }
     
     ribbonAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
@@ -145,6 +155,12 @@ class HabitViewController: UIViewController {
       try! realm.write {
         user.ribbons += 1
       }
+      
+    } else if habit.level == 3 {
+      ribbonPopup(habit.level)
+      try! realm.write {
+        user.ribbons += 1
+      }
     } else if habit.level == 5 {
       congratsPopup(habit.level)
       try! realm.write {
@@ -153,6 +169,16 @@ class HabitViewController: UIViewController {
         habit.evolveLevel = habit.evolveLevel * 3
         habit.profile = habit.profile1
       }
+    } else if habit.level == 7 {
+      ribbonPopup(habit.level)
+      try! realm.write {
+        user.ribbons += 1
+      }
+    } else if habit.level == 10 {
+      ribbonPopup(habit.level)
+      try! realm.write {
+        user.ribbons += 1
+      }
     } else if habit.level == 15 {
       congratsPopup(habit.level)
       try! realm.write {
@@ -160,6 +186,16 @@ class HabitViewController: UIViewController {
         habit.image = habit.evolution2
         habit.evolveLevel = habit.evolveLevel * 2
         habit.profile = habit.profile2
+      }
+    } else if habit.level == 20 {
+      ribbonPopup(habit.level)
+      try! realm.write {
+        user.ribbons += 1
+      }
+    } else if habit.level == 25 {
+      ribbonPopup(habit.level)
+      try! realm.write {
+        user.ribbons += 1
       }
     } else if habit.level == 30 {
       //      print("CHANGE THIS BACK TO 30 BEFORE DEPLOYMENT.")
