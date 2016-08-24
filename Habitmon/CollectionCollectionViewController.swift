@@ -53,7 +53,8 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
     }
   
   override func viewWillAppear(animated: Bool) {
-    //so that the table data will refresh when the page is visited again
+    //so that the data will refresh when the page is visited again
+    ribbonsCount.text = "Ribbons: \(realm.objects(User)[0].ribbons)"
     self.collectionView!.reloadData()
   }
 

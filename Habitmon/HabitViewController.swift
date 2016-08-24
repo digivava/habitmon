@@ -13,6 +13,7 @@ class HabitViewController: UIViewController {
 
   let realm = try! Realm()
   var habit: Habit!
+  var user = try! Realm().objects(User)[0]
   
   // MARK: - Properties
   @IBOutlet weak var habitmonImage: UIImageView!
@@ -123,8 +124,28 @@ class HabitViewController: UIViewController {
     presentViewController(congratsAlert, animated: true, completion: nil)
   }
   
+  func ribbonPopup(level: Int) {
+    
+    let ribbonAlert = UIAlertController(title: "You got a ribbon!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    if level == 1 {
+      ribbonAlert.message = "Starting off strong! You received a ribbon for your efforts."
+    }
+    
+    ribbonAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+    }))
+    
+    presentViewController(ribbonAlert, animated: true, completion: nil)
+  }
+  
   func levelUpResults() {
-    if habit.level == 5 {
+    
+    if habit.level == 1 {
+      ribbonPopup(habit.level)
+      try! realm.write {
+        user.ribbons += 1
+      }
+    } else if habit.level == 5 {
       congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution1
@@ -194,7 +215,7 @@ class HabitViewController: UIViewController {
     }
     
     levelUpResults()
-        
+    
     // update the labels
     levelValue = habit.level
     habitmonNameText = habit.habitmon!
