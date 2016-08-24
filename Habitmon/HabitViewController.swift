@@ -15,7 +15,6 @@ class HabitViewController: UIViewController {
   var habit: Habit!
   
   // MARK: - Properties
-  @IBOutlet weak var habitNameLabel: UILabel!
   @IBOutlet weak var habitmonImage: UIImageView!
   @IBOutlet weak var levelNumberLabel: UILabel!
   @IBOutlet weak var habitmonNameLabel: UILabel!
@@ -31,12 +30,6 @@ class HabitViewController: UIViewController {
   var levelValue: Int = 0 {
     didSet {
       levelNumberLabel.text = "level \(levelValue)"
-    }
-  }
-  
-  var habitNameText: String = "" {
-    didSet {
-      habitNameLabel.text = "\(habitNameText)"
     }
   }
   
@@ -99,7 +92,6 @@ class HabitViewController: UIViewController {
     
     // connects to property observer so that it can update level number in real time
     levelValue = habit.level
-    habitNameText = habit.name!
     habitmonNameText = habit.habitmon!
     habitmonDescriptionText = habit.profile!
     habitmonImageView = UIImage(named: habit.image!)

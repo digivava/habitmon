@@ -15,11 +15,14 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
   
   let realm = try! Realm()
   var habitmons: Results<Collection>!
+  
   @IBOutlet weak var collectionView: UICollectionView!
+  
+  @IBOutlet weak var ribbonsCount: UILabel!
   
   // definitely refactor this later
   
-  var headers = ["Golden Habitmon collected: \(try! Realm().objects(Collection).filter("name BEGINSWITH 'Golden'").count)/\(try! Realm().objects(Habit).count)", "Habitmon collected: \(try! Realm().objects(Collection).count)/\(try! Realm().objects(Habit).count * 3)"]
+//  var headers = ["Golden Habitmon collected: \(try! Realm().objects(Collection).filter("name BEGINSWITH 'Golden'").count)/\(try! Realm().objects(Habit).count)", "Habitmon collected: \(try! Realm().objects(Collection).count)/\(try! Realm().objects(Habit).count * 3)"]
   
 //  var headers: [String] {
 //    didSet {
@@ -44,7 +47,9 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
         // Do any additional setup after loading the view.
     
         habitmons = realm.objects(Collection)
-        print(habitmons)
+    
+        // the ribbons count of the current user
+        ribbonsCount.text = "Ribbons: \(realm.objects(User)[0].ribbons)"
     }
   
   override func viewWillAppear(animated: Bool) {
@@ -64,11 +69,11 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
      
        if segue.identifier == "Show" {
        
-       let detailsVC = segue.destinationViewController as! CollectionViewController
-       let cell = sender as! CollectionCollectionViewCell
-       let indexPaths = self.collectionView!.indexPathForCell(cell)
-       let thisHabitmon = self.habitmons[indexPaths!.row] as Collection
-       detailsVC.habitmon = thisHabitmon
+         let detailsVC = segue.destinationViewController as! CollectionViewController
+         let cell = sender as! CollectionCollectionViewCell
+         let indexPaths = self.collectionView!.indexPathForCell(cell)
+         let thisHabitmon = self.habitmons[indexPaths!.row] as Collection
+         detailsVC.habitmon = thisHabitmon
        
        }
      

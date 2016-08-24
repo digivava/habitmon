@@ -114,13 +114,14 @@ class HabitTableViewController: UITableViewController {
     
       if segue.identifier == "Show" {
         let habitDetailViewController = segue.destinationViewController as! HabitViewController
-//      segue.destinationViewController.name = habit.name
         
         // Get the cell that generated this segue.
         if let selectedHabitCell = sender as? HabitTableViewCell {
           let indexPath = tableView.indexPathForCell(selectedHabitCell)!
           let selectedHabit = habits[indexPath.row]
           habitDetailViewController.habit = selectedHabit
+          
+          segue.destinationViewController.title = selectedHabit.name
         }
       }
     }
