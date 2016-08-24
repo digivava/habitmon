@@ -73,6 +73,11 @@ class HabitViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // makes this view vertically scrollable
+//    let scrollView = view as! UIScrollView
+//    scrollView.setContentOffset(CGPointMake(0, scrollView.contentOffset.y), animated: false)
+//    [self.scrollView setContentOffset: CGPointMake(0, self.scrollView.contentOffset.y)];
+    
     // get the difference between the current time and when user last checked the checkbox
     let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
     // convert to integer for easier handling
@@ -117,24 +122,8 @@ class HabitViewController: UIViewController {
     
     presentViewController(congratsAlert, animated: true, completion: nil)
   }
-
-
-  // MARK: - Actions
-
-  @IBAction func checkboxTapped(sender: UIButton) {
-    // change to checked-off image of checkbox
-    // why is this not staying checked-off?
-    checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
-    
-    // level-up related code.... this whole thing should be in its own method on the Model but I can't figure out how to connect to that right now so HERE WE ARE. GOTTA SHIP SHIP SHIP.
-//    let realm = try! Realm()
-    
-    try! realm.write {
-      habit.level += 1
-      habit.checked = true
-      habit.updatedAt = NSDate()
-    }
-    
+  
+  func levelUpResults() {
     if habit.level == 5 {
       congratsPopup(habit.level)
       try! realm.write {
@@ -151,8 +140,8 @@ class HabitViewController: UIViewController {
         habit.evolveLevel = habit.evolveLevel * 2
         habit.profile = habit.profile2
       }
-    } else if habit.level == 2 {
-      print("CHANGE THIS BACK TO 30 BEFORE DEPLOYMENT.")
+    } else if habit.level == 30 {
+      //      print("CHANGE THIS BACK TO 30 BEFORE DEPLOYMENT.")
       congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution3
@@ -178,14 +167,34 @@ class HabitViewController: UIViewController {
       cheatDaysButton.enabled = true
     }
     // golden evolution form, for later if time
-//    } else if habit.level == 60 {
-//      habit.habitmon = habit.evolution4
-//      habit.image = habit.evolution4
-//      habit.profile = habit.profile4
+    //    } else if habit.level == 60 {
+    //      habit.habitmon = habit.evolution4
+    //      habit.image = habit.evolution4
+    //      habit.profile = habit.profile4
     
     // create a new instance in Collection, just of Golden habitmon
-//    }
+    //    }
+  }
+
+
+  // MARK: - Actions
+
+  @IBAction func checkboxTapped(sender: UIButton) {
+    // change to checked-off image of checkbox
+    // why is this not staying checked-off?
+    checkboxButton.setBackgroundImage(UIImage(named: "checkedOff"), forState: UIControlState.Normal)
     
+    // level-up related code.... this whole thing should be in its own method on the Model but I can't figure out how to connect to that right now so HERE WE ARE. GOTTA SHIP SHIP SHIP.
+//    let realm = try! Realm()
+    
+    try! realm.write {
+      habit.level += 1
+      habit.checked = true
+      habit.updatedAt = NSDate()
+    }
+    
+    levelUpResults()
+        
     // update the labels
     levelValue = habit.level
     habitmonNameText = habit.habitmon!
