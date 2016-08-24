@@ -12,11 +12,20 @@ import RealmSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+  
+  let realm = try! Realm()
   var window: UIWindow?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
+    if realm.objects(User).count == 0 {
+      try! realm.write {
+        realm.create(User.self)
+      }
+    }
+    
+    print(realm.objects(User))
     
     return true
   }

@@ -23,14 +23,4 @@ class Collection: Object {
   dynamic var profile: String = "A happy Habitmon, raised with love."
   dynamic var createdAt = NSDate()
   
-//  dynamic var evolution1: String? = ""
-//  dynamic var evolution2: String? = ""
-//  dynamic var evolution3: String? = ""
-//  dynamic var evolution4: String? = ""
-//  
-//  dynamic var profile1: String? = ""
-//  dynamic var profile2: String? = ""
-//  dynamic var profile3: String? = ""
-//  dynamic var profile4: String? = ""
-  
 }
