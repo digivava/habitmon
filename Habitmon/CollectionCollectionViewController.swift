@@ -20,15 +20,6 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
   
   @IBOutlet weak var ribbonsCount: UILabel!
   
-  // definitely refactor this later
-  
-//  var headers = ["Golden Habitmon collected: \(try! Realm().objects(Collection).filter("name BEGINSWITH 'Golden'").count)/\(try! Realm().objects(Habit).count)", "Habitmon collected: \(try! Realm().objects(Collection).count)/\(try! Realm().objects(Habit).count * 3)"]
-  
-//  var headers: [String] {
-//    didSet {
-//      headers = ["Golden Habitmon collected: \(try! Realm().objects(Collection).filter("name BEGINSWITH 'Golden'").count)/\(try! Realm().objects(Habit).count)", "Habitmon collected: \(try! Realm().objects(Collection).count)/\(try! Realm().objects(Habit).count * 3)"]
-//    }
-//  }
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -119,8 +110,7 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as! SectionHeaderCollectionReusableView
         
         // multiplied by 3 to account for 3 habitmon per habit
-//        header.headerLabel.text = headers[1]
-          header.headerLabel.text = "Habitmon collected: \(realm.objects(Collection).count)/\(realm.objects(Habit).count * 3)"
+          header.headerLabel.text = "Habitmon collected: \(realm.objects(Collection).filter("NOT (name CONTAINS 'Golden')").count)/\(realm.objects(Habit).count * 3)"
         
         return header
       }
