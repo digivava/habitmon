@@ -352,14 +352,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LqP-rh-sJM">
-                                <rect key="frame" x="20" y="144" width="560" height="407"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nK2-Ke-ZMW">
+                                <rect key="frame" x="0.0" y="64" width="600" height="626"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9g-vM-0nz">
-                                        <rect key="frame" x="230" y="0.0" width="100" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-tH-Ek1">
+                                        <rect key="frame" x="279" y="129" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="359" y="145" width="42" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-HA-vVx">
+                                        <rect key="frame" x="486" y="48" width="106" height="30"/>
+                                        <state key="normal" title="Use cheat day?"/>
+                                        <connections>
+                                            <action selector="useCheatButton:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="P50-38-06D"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PKA-EZ-Gai">
+                                        <rect key="frame" x="180" y="441" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Ra-TxH">
+                                        <rect key="frame" x="141" y="158" width="318" height="215"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="K9g-vM-0nz" secondAttribute="height" multiplier="1:1" id="4iA-n3-HUi"/>
-                                            <constraint firstAttribute="height" constant="100" id="eYn-b0-DKY"/>
+                                            <constraint firstAttribute="height" constant="173" id="eUF-Df-FDh"/>
+                                            <constraint firstAttribute="width" constant="254" id="q07-yK-GJ7"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="eUF-Df-FDh"/>
+                                                <exclude reference="q07-yK-GJ7"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="39" y="210" width="682" height="462"/>
+                                        </variation>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9g-vM-0nz">
+                                        <rect key="frame" x="250" y="21" width="100" height="100"/>
+                                        <constraints>
                                             <constraint firstAttribute="width" constant="100" id="v19-US-zv3"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="emptyCheckbox"/>
@@ -375,97 +412,59 @@
                                             <action selector="checkboxTapped:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="tCZ-8f-m3A"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-tH-Ek1">
-                                        <rect key="frame" x="259" y="112" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="359" y="145" width="42" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Ra-TxH">
-                                        <rect key="frame" x="121" y="145" width="318" height="215"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Y5q-Ra-TxH" secondAttribute="height" multiplier="510:345" id="W2Y-gj-Lz3"/>
-                                            <constraint firstAttribute="height" constant="173" id="eUF-Df-FDh"/>
-                                            <constraint firstAttribute="width" constant="254" id="q07-yK-GJ7"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="eUF-Df-FDh"/>
-                                                <exclude reference="q07-yK-GJ7"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="39" y="210" width="682" height="462"/>
-                                        </variation>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hearts3" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-GK-8F6">
+                                        <rect key="frame" x="486" y="8" width="106" height="40"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riE-QW-I5I">
-                                        <rect key="frame" x="259" y="372" width="42" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riE-QW-I5I">
+                                        <rect key="frame" x="141" y="381" width="318" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="359" y="177" width="42" height="21"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRb-f2-G5U">
-                                        <rect key="frame" x="259" y="395" width="42" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-F9-LpG">
+                                        <rect key="frame" x="141" y="409" width="318" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="359" y="683" width="42" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf6-US-GPY">
-                                        <rect key="frame" x="259" y="407" width="42" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="359" y="716" width="42" height="21"/>
-                                        </variation>
                                     </label>
                                 </subviews>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearts3" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-GK-8F6">
-                                <rect key="frame" x="475" y="68" width="100" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="X11-uP-1sQ"/>
+                                    <constraint firstItem="3Rv-tH-Ek1" firstAttribute="top" secondItem="K9g-vM-0nz" secondAttribute="bottom" constant="8" id="2ea-MC-Frf"/>
+                                    <constraint firstItem="PKA-EZ-Gai" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="5bp-E2-gAQ"/>
+                                    <constraint firstItem="Y5q-Ra-TxH" firstAttribute="top" secondItem="3Rv-tH-Ek1" secondAttribute="bottom" constant="8" id="BMi-Ng-m2a"/>
+                                    <constraint firstItem="riE-QW-I5I" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="Soo-uC-OFG"/>
+                                    <constraint firstItem="3Rv-tH-Ek1" firstAttribute="top" secondItem="K9g-vM-0nz" secondAttribute="bottom" constant="8" id="Wah-hB-nWv"/>
+                                    <constraint firstItem="dZP-F9-LpG" firstAttribute="top" secondItem="riE-QW-I5I" secondAttribute="bottom" constant="8" id="X1o-L9-ETX"/>
+                                    <constraint firstItem="riE-QW-I5I" firstAttribute="top" secondItem="Y5q-Ra-TxH" secondAttribute="bottom" constant="8" id="YB7-ky-LXv"/>
+                                    <constraint firstItem="dZP-F9-LpG" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="bNV-MU-9Db"/>
+                                    <constraint firstItem="Y5q-Ra-TxH" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="dZm-3F-wge"/>
+                                    <constraint firstItem="3Rv-tH-Ek1" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="kyp-1S-tPb"/>
+                                    <constraint firstItem="K9g-vM-0nz" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="oPw-1w-Zy8"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-HA-vVx">
-                                <rect key="frame" x="472" y="106" width="106" height="30"/>
-                                <state key="normal" title="Use cheat day?"/>
-                                <connections>
-                                    <action selector="useCheatButton:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="P50-38-06D"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="4VX-GK-8F6" secondAttribute="trailing" constant="5" id="59Z-JU-HDc"/>
-                            <constraint firstItem="4VX-GK-8F6" firstAttribute="centerX" secondItem="0dv-HA-vVx" secondAttribute="centerX" id="ECK-79-WAH"/>
-                            <constraint firstItem="LqP-rh-sJM" firstAttribute="top" secondItem="0dv-HA-vVx" secondAttribute="bottom" constant="8" symbolic="YES" id="Fcn-os-IZp"/>
-                            <constraint firstItem="spo-km-qKR" firstAttribute="top" secondItem="LqP-rh-sJM" secondAttribute="bottom" id="JCG-cc-rME"/>
-                            <constraint firstItem="4VX-GK-8F6" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="4" id="PYA-e2-j5g"/>
-                            <constraint firstItem="LqP-rh-sJM" firstAttribute="leading" secondItem="hLi-hD-6FU" secondAttribute="leadingMargin" id="UWg-nO-Yfo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LqP-rh-sJM" secondAttribute="trailing" id="aiw-gO-ONQ"/>
-                            <constraint firstItem="LqP-rh-sJM" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="80" id="qFw-38-fUW"/>
-                            <constraint firstItem="LqP-rh-sJM" firstAttribute="top" secondItem="4VX-GK-8F6" secondAttribute="bottom" constant="36" id="uHr-ph-EKA"/>
+                            <constraint firstItem="K9g-vM-0nz" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="21" id="OD0-Dz-X0y"/>
+                            <constraint firstItem="nK2-Ke-ZMW" firstAttribute="height" secondItem="hLi-hD-6FU" secondAttribute="height" constant="26" id="VBA-UM-f16"/>
+                            <constraint firstItem="nK2-Ke-ZMW" firstAttribute="centerY" secondItem="hLi-hD-6FU" secondAttribute="centerY" constant="77" id="dHT-Uu-wBE"/>
+                            <constraint firstItem="nK2-Ke-ZMW" firstAttribute="width" secondItem="hLi-hD-6FU" secondAttribute="width" id="gqn-eE-rhE"/>
+                            <constraint firstItem="nK2-Ke-ZMW" firstAttribute="centerX" secondItem="hLi-hD-6FU" secondAttribute="centerX" id="v21-k2-IAA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cheatDaysButton" destination="0dv-HA-vVx" id="QBg-sj-T00"/>
                         <outlet property="cheatHearts" destination="4VX-GK-8F6" id="BjB-MR-1CL"/>
                         <outlet property="checkboxButton" destination="K9g-vM-0nz" id="x0T-93-zGK"/>
-                        <outlet property="evolveLevelLabel" destination="xf6-US-GPY" id="f5A-rS-Jw9"/>
-                        <outlet property="habitmonDescription" destination="DRb-f2-G5U" id="oLj-hb-HXL"/>
+                        <outlet property="evolveLevelLabel" destination="dZP-F9-LpG" id="zIz-qn-J8P"/>
+                        <outlet property="habitmonDescription" destination="PKA-EZ-Gai" id="bEw-1c-CVa"/>
                         <outlet property="habitmonImage" destination="Y5q-Ra-TxH" id="mP1-8K-s6v"/>
                         <outlet property="habitmonNameLabel" destination="riE-QW-I5I" id="ckr-u6-5aj"/>
                         <outlet property="levelNumberLabel" destination="3Rv-tH-Ek1" id="d64-6Y-km4"/>
+                        <outlet property="scrollView" destination="nK2-Ke-ZMW" id="VJM-BN-HEg"/>
                         <segue destination="g3F-iE-nop" kind="unwind" identifier="unwindToHabits" unwindAction="unwindToHabits:" id="sPT-iV-fhk"/>
                     </connections>
                 </viewController>

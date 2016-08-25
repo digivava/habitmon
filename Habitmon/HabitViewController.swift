@@ -16,11 +16,17 @@ class HabitViewController: UIViewController {
   var user = try! Realm().objects(User)[0]
   
   // MARK: - Properties
+  
+  @IBOutlet weak var scrollView: UIScrollView!
+  
   @IBOutlet weak var habitmonImage: UIImageView!
   @IBOutlet weak var levelNumberLabel: UILabel!
   @IBOutlet weak var habitmonNameLabel: UILabel!
-  @IBOutlet weak var habitmonDescription: UILabel!
+
+  @IBOutlet weak var habitmonDescription: UITextView!
+  
   @IBOutlet weak var evolveLevelLabel: UILabel!
+  
   @IBOutlet weak var checkboxButton: UIButton!
   @IBOutlet weak var cheatHearts: UIImageView!
   @IBOutlet weak var cheatDaysButton: UIButton!
@@ -74,10 +80,7 @@ class HabitViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // makes this view vertically scrollable
-//    let scrollView = view as! UIScrollView
-//    scrollView.setContentOffset(CGPointMake(0, scrollView.contentOffset.y), animated: false)
-//    [self.scrollView setContentOffset: CGPointMake(0, self.scrollView.contentOffset.y)];
+    scrollView.contentSize.height = 1000
     
     // get the difference between the current time and when user last checked the checkbox
     let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
@@ -198,7 +201,6 @@ class HabitViewController: UIViewController {
         user.ribbons += 1
       }
     } else if habit.level == 30 {
-      //      print("CHANGE THIS BACK TO 30 BEFORE DEPLOYMENT.")
       congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution3
@@ -223,14 +225,6 @@ class HabitViewController: UIViewController {
       // every 30 levels, cheat days are replenished
       cheatDaysButton.enabled = true
     }
-    // golden evolution form, for later if time
-    //    } else if habit.level == 60 {
-    //      habit.habitmon = habit.evolution4
-    //      habit.image = habit.evolution4
-    //      habit.profile = habit.profile4
-    
-    // create a new instance in Collection, just of Golden habitmon
-    //    }
   }
 
 

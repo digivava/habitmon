@@ -110,7 +110,7 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as! SectionHeaderCollectionReusableView
         
         // multiplied by 3 to account for 3 habitmon per habit
-          header.headerLabel.text = "Habitmon collected: \(realm.objects(Collection).filter("NOT (name CONTAINS 'Golden')").count)/\(realm.objects(Habit).count * 3)"
+          header.headerLabel.text = "Habitmon collected: \(realm.objects(Collection).count)/\(realm.objects(Habit).count * 3)"
         
         return header
       }

@@ -32,7 +32,6 @@ class Habit: Object {
   dynamic var evolution1: String? = ""
   dynamic var evolution2: String? = ""
   dynamic var evolution3: String? = ""
-  dynamic var evolution4: String? = ""
   
   dynamic var evolveLevel: Int = 5
 //  dynamic var evolveLevel2: Int = 15
@@ -43,11 +42,5 @@ class Habit: Object {
   dynamic var profile1: String? = "A cute, lovable Habitmon."
   dynamic var profile2: String? = "A bratty teenage Habitmon."
   dynamic var profile3: String? = "A strong, majestic Habitmon."
-  dynamic var profile4: String? = "Like its previous form except more shining, shimmering, splendid."
-  
-//  // makes the id the key
-//  override static func primaryKey() -> String? {
-//    return "id"
-//  }
   
 }
