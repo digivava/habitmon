@@ -355,100 +355,96 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nK2-Ke-ZMW">
                                 <rect key="frame" x="0.0" y="64" width="600" height="626"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-tH-Ek1">
-                                        <rect key="frame" x="279" y="129" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="359" y="145" width="42" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-HA-vVx">
-                                        <rect key="frame" x="486" y="48" width="106" height="30"/>
-                                        <state key="normal" title="Use cheat day?"/>
-                                        <connections>
-                                            <action selector="useCheatButton:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="P50-38-06D"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PKA-EZ-Gai">
-                                        <rect key="frame" x="180" y="441" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqO-uO-zz7">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="537"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PKA-EZ-Gai">
+                                                <rect key="frame" x="180" y="425" width="240" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hearts3" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-GK-8F6">
+                                                <rect key="frame" x="486" y="8" width="106" height="40"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-HA-vVx">
+                                                <rect key="frame" x="486" y="51" width="106" height="30"/>
+                                                <state key="normal" title="Use cheat day?"/>
+                                                <connections>
+                                                    <action selector="useCheatButton:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="P50-38-06D"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-F9-LpG">
+                                                <rect key="frame" x="141" y="396" width="318" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riE-QW-I5I">
+                                                <rect key="frame" x="141" y="368" width="318" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="359" y="177" width="42" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-tH-Ek1">
+                                                <rect key="frame" x="279" y="116" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="359" y="145" width="42" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9g-vM-0nz">
+                                                <rect key="frame" x="250" y="8" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="v19-US-zv3"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="emptyCheckbox"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="v19-US-zv3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="330" y="33" width="100" height="100"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="checkboxTapped:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="tCZ-8f-m3A"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Ra-TxH">
+                                                <rect key="frame" x="141" y="145" width="318" height="215"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="173" id="eUF-Df-FDh"/>
+                                                    <constraint firstAttribute="width" constant="254" id="q07-yK-GJ7"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="eUF-Df-FDh"/>
+                                                        <exclude reference="q07-yK-GJ7"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="39" y="210" width="682" height="462"/>
+                                                </variation>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Ra-TxH">
-                                        <rect key="frame" x="141" y="158" width="318" height="215"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="173" id="eUF-Df-FDh"/>
-                                            <constraint firstAttribute="width" constant="254" id="q07-yK-GJ7"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="eUF-Df-FDh"/>
-                                                <exclude reference="q07-yK-GJ7"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="39" y="210" width="682" height="462"/>
-                                        </variation>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9g-vM-0nz">
-                                        <rect key="frame" x="250" y="21" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="v19-US-zv3"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="emptyCheckbox"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="v19-US-zv3"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="330" y="33" width="100" height="100"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="checkboxTapped:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="tCZ-8f-m3A"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hearts3" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-GK-8F6">
-                                        <rect key="frame" x="486" y="8" width="106" height="40"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riE-QW-I5I">
-                                        <rect key="frame" x="141" y="381" width="318" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="359" y="177" width="42" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-F9-LpG">
-                                        <rect key="frame" x="141" y="409" width="318" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3Rv-tH-Ek1" firstAttribute="top" secondItem="K9g-vM-0nz" secondAttribute="bottom" constant="8" id="2ea-MC-Frf"/>
-                                    <constraint firstItem="PKA-EZ-Gai" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="5bp-E2-gAQ"/>
-                                    <constraint firstItem="Y5q-Ra-TxH" firstAttribute="top" secondItem="3Rv-tH-Ek1" secondAttribute="bottom" constant="8" id="BMi-Ng-m2a"/>
-                                    <constraint firstItem="riE-QW-I5I" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="Soo-uC-OFG"/>
-                                    <constraint firstItem="3Rv-tH-Ek1" firstAttribute="top" secondItem="K9g-vM-0nz" secondAttribute="bottom" constant="8" id="Wah-hB-nWv"/>
-                                    <constraint firstItem="dZP-F9-LpG" firstAttribute="top" secondItem="riE-QW-I5I" secondAttribute="bottom" constant="8" id="X1o-L9-ETX"/>
-                                    <constraint firstItem="riE-QW-I5I" firstAttribute="top" secondItem="Y5q-Ra-TxH" secondAttribute="bottom" constant="8" id="YB7-ky-LXv"/>
-                                    <constraint firstItem="dZP-F9-LpG" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="bNV-MU-9Db"/>
-                                    <constraint firstItem="Y5q-Ra-TxH" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="dZm-3F-wge"/>
-                                    <constraint firstItem="3Rv-tH-Ek1" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="kyp-1S-tPb"/>
-                                    <constraint firstItem="K9g-vM-0nz" firstAttribute="centerX" secondItem="nK2-Ke-ZMW" secondAttribute="centerX" id="oPw-1w-Zy8"/>
+                                    <constraint firstItem="jqO-uO-zz7" firstAttribute="width" secondItem="nK2-Ke-ZMW" secondAttribute="width" id="FIw-eK-10s"/>
+                                    <constraint firstItem="jqO-uO-zz7" firstAttribute="height" secondItem="nK2-Ke-ZMW" secondAttribute="height" id="PZd-Ir-FaP"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K9g-vM-0nz" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="21" id="OD0-Dz-X0y"/>
                             <constraint firstItem="nK2-Ke-ZMW" firstAttribute="height" secondItem="hLi-hD-6FU" secondAttribute="height" constant="26" id="VBA-UM-f16"/>
                             <constraint firstItem="nK2-Ke-ZMW" firstAttribute="centerY" secondItem="hLi-hD-6FU" secondAttribute="centerY" constant="77" id="dHT-Uu-wBE"/>
                             <constraint firstItem="nK2-Ke-ZMW" firstAttribute="width" secondItem="hLi-hD-6FU" secondAttribute="width" id="gqn-eE-rhE"/>
