@@ -17,8 +17,6 @@ class HabitViewController: UIViewController {
   
   // MARK: - Properties
   
-  @IBOutlet weak var scrollView: UIScrollView!
-  
   @IBOutlet weak var habitmonImage: UIImageView!
   @IBOutlet weak var levelNumberLabel: UILabel!
   @IBOutlet weak var habitmonNameLabel: UILabel!
@@ -79,8 +77,6 @@ class HabitViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    scrollView.contentSize.height = 1000
     
     // get the difference between the current time and when user last checked the checkbox
     let elapsedTime = NSDate().timeIntervalSinceDate(habit.updatedAt)
