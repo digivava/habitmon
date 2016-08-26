@@ -37,7 +37,7 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
 
         // Do any additional setup after loading the view.
     
-        habitmons = realm.objects(Collection)
+        habitmons = realm.objects(Collection).sorted("habit")
     
         // the ribbons count of the current user
         ribbonsCount.text = "Ribbons: \(realm.objects(User)[0].ribbons)"
