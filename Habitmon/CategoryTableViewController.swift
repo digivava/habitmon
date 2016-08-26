@@ -33,6 +33,15 @@ class CategoryTableViewController: UITableViewController {
     return habit
   }
   
+//  func seedHabits() {
+//    try! realm.write {
+//      realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "category": "Diet", "evolution1": "Lollipup", "evolution2": "Sugpug", "evolution3": "Molassie", "profile1": "Happily feasts on all the sugar you aren't eating. Particularly enjoys smugly eating your favorites right next to you. But such a loyal and cuddly friend, you can't help but stay near it.", "profile2": "Hordes a stash of gooey, fresh-baked chocolate chip cookies in its doghouse and gets vicious if you try to snag any. Likes belly-rubs.", "profile3": "A powerful yet flighty spirit that rarely shows itself to humans. Legend says it comes only to those who prove themselves as truly self-disciplined."])
+//      
+//      realm.create(Habit.self, value: ["id": 2, "name": "Write 1000 words", "category": "Creative", "evolution1": "Wordvark", "evolution2": "Pengolin", "evolution3": "Bookupine", "profile1": "Patches of its skin open up to reveal inspiring passages from great works of literature, tragically relevant poetry, and occasionally trashy clickbait articles from the Internet.", "profile2": "Its ink-tipped tongue can produce manuscripts at 200 WPM. Does its best thinking in the early morning.", "profile3": "Its awkward introversion leads to it often being misunderstood. Uses its fountain-pen quills to work on many projects at once. Likes to be given coffee in its water bowl."])
+//      
+//    }
+//  }
+  
   
   // MARK: - Actions
   
@@ -48,14 +57,9 @@ class CategoryTableViewController: UITableViewController {
     super.viewDidLoad()
     
     if realm.objects(Habit.self).count == 0 {
-      try! realm.write {
-        realm.create(Habit.self, value: ["id": 1, "name": "No sweets", "category": "Diet", "evolution1": "Lollipup", "evolution2": "Sugpug", "evolution3": "Molassie", "profile1": "Happily feasts on all the sugar you aren't eating. Particularly enjoys smugly eating your favorites right next to you. But such a loyal and cuddly friend, you can't help but stay near it.", "profile2": "Hordes a stash of gooey, fresh-baked chocolate chip cookies in its doghouse and gets vicious if you try to snag any. Likes belly-rubs.", "profile3": "A powerful yet flighty spirit that rarely shows itself to humans. Legend says it comes only to those who prove themselves as truly self-disciplined."])
-        
-        realm.create(Habit.self, value: ["id": 2, "name": "Write 1000 words", "category": "Creative", "evolution1": "Wordvark", "evolution2": "Pengolin", "evolution3": "Bookupine", "profile1": "Patches of its skin open up to reveal inspiring passages from great works of literature, tragically relevant poetry, and occasionally trashy clickbait articles from the Internet.", "profile2": "Its ink-tipped tongue can produce manuscripts at 200 WPM. Does its best thinking in the early morning.", "profile3": "Its awkward introversion leads to it often being misunderstood. Uses its fountain-pen quills to work on many projects at once. Likes to be given coffee in its water bowl."])
-        
-      }
-
+      Habit().seedHabits()
     }
+    
     
     loadHabits()
   }
