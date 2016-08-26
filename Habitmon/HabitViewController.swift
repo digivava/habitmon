@@ -85,7 +85,7 @@ class HabitViewController: UIViewController {
     // convert to integer for easier handling
     let duration = Int(elapsedTime)
 
-    // the amount of seconds that the user must wait before they can check the checkbox again. in production this should be something like 12 hours, i.e. 43,200 secs. but "duration" is measured in seconds so for development a small number like 12 (seconds) is fine.
+    // the amount of seconds that the user must wait before they can check the checkbox again. in production this should be something like 12 hours, i.e. 43,200 secs. but "duration" is measured in seconds so for development a small number is fine.
     let waitingTime = 0
 
     // user can't interact with checkbox if already has been checked within 12 hrs
@@ -169,6 +169,11 @@ class HabitViewController: UIViewController {
         habit.image = habit.evolution1
         habit.evolveLevel = habit.evolveLevel * 3
         habit.profile = habit.profile1
+        
+        if realm.objects(Collection).filter("name = \"" + habit.habitmon! + "\"").count == 0 {
+          // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
+          realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
+        }
       }
     } else if habit.level == 7 {
       ribbonPopup(habit.level)
@@ -187,6 +192,11 @@ class HabitViewController: UIViewController {
         habit.image = habit.evolution2
         habit.evolveLevel = habit.evolveLevel * 2
         habit.profile = habit.profile2
+        
+        if realm.objects(Collection).filter("name = \"" + habit.habitmon! + "\"").count == 0 {
+          // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
+          realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
+        }
       }
     } else if habit.level == 20 {
       ribbonPopup(habit.level)
@@ -209,12 +219,12 @@ class HabitViewController: UIViewController {
         
         
         //if this habitmon chain does not already exist in the Collection
-        if realm.objects(Collection).filter("habit = \"" + habit.name! + "\"").count == 0 {
+        if realm.objects(Collection).filter("name = \"" + habit.habitmon! + "\"").count == 0 {
           // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
-          realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
-          
-          realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
-          
+//          realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
+//          
+//          realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
+//          
           realm.create(Collection.self, value: ["name": "\(habit.evolution3!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution3!)", "profile": "\(habit.profile3!)"])
         }
         
