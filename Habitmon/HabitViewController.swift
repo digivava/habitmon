@@ -263,9 +263,25 @@ class HabitViewController: UIViewController {
     
     // only if the user has cheat days remaining for this habit
     if habit.cheatDays >= 1 {
-      try! realm.write {
-        habit.cheatDays -= 1
-      }
+      
+      let useCheatDayAlert = UIAlertController(title: "Use cheat day?", message: "You only get 3 cheat days per month. Are you sure you want to use one?", preferredStyle: UIAlertControllerStyle.Alert)
+      
+      useCheatDayAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+        try! self.realm.write {
+          self.habit.cheatDays -= 1
+        }
+        
+        //have to do this inside here too because of async
+        self.cheatDaysHearts = UIImage(named: "hearts\(self.habit.cheatDays)")
+      }))
+      
+      useCheatDayAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+        
+      }))
+      
+      presentViewController(useCheatDayAlert, animated: true, completion: nil)
+      
+
     } else {
       let noMoreCheatsAlert = UIAlertController(title: "Out Of Cheat Days", message: "Sorry, but you have used all your cheat days for this month. This habit will be deleted and you must hatch it again.", preferredStyle: UIAlertControllerStyle.Alert)
       
