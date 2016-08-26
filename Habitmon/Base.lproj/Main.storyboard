@@ -431,45 +431,47 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zeW-Fp-HOd">
-                                <rect key="frame" x="157" y="108" width="106" height="60"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearts3" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-GK-8F6">
-                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-HA-vVx">
-                                        <rect key="frame" x="0.0" y="30" width="106" height="30"/>
-                                        <state key="normal" title="Use cheat day?"/>
-                                        <connections>
-                                            <action selector="useCheatButton:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="P50-38-06D"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearts3" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-GK-8F6">
+                                <rect key="frame" x="157" y="124" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bp6-wa-xzC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-HA-vVx">
+                                <rect key="frame" x="157" y="162" width="106" height="30"/>
+                                <state key="normal" title="Use cheat day?"/>
+                                <connections>
+                                    <action selector="useCheatButton:" destination="RNN-AY-x5Z" eventType="touchUpInside" id="P50-38-06D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="spo-km-qKR" firstAttribute="top" secondItem="PKA-EZ-Gai" secondAttribute="bottom" constant="8" symbolic="YES" id="2cg-VI-gGG"/>
+                            <constraint firstItem="4VX-GK-8F6" firstAttribute="leading" secondItem="0dv-HA-vVx" secondAttribute="leading" id="31W-lZ-6Q0"/>
                             <constraint firstItem="Y5q-Ra-TxH" firstAttribute="trailing" secondItem="riE-QW-I5I" secondAttribute="trailing" id="7SJ-H7-BSC"/>
                             <constraint firstItem="K9g-vM-0nz" firstAttribute="leading" secondItem="3Rv-tH-Ek1" secondAttribute="leading" id="8OK-yA-8zZ"/>
                             <constraint firstItem="dZP-F9-LpG" firstAttribute="trailing" secondItem="PKA-EZ-Gai" secondAttribute="trailing" id="8kA-Ba-kEW"/>
                             <constraint firstItem="K9g-vM-0nz" firstAttribute="trailing" secondItem="3Rv-tH-Ek1" secondAttribute="trailing" id="D7t-ev-Mdl"/>
                             <constraint firstItem="Gf0-jh-Buo" firstAttribute="leading" secondItem="K9g-vM-0nz" secondAttribute="trailing" constant="8" symbolic="YES" id="ES0-5g-rut"/>
                             <constraint firstItem="Y5q-Ra-TxH" firstAttribute="leading" secondItem="riE-QW-I5I" secondAttribute="leading" id="HCU-C8-uq3"/>
-                            <constraint firstItem="Gf0-jh-Buo" firstAttribute="centerY" secondItem="zeW-Fp-HOd" secondAttribute="centerY" id="HSo-OQ-We8"/>
                             <constraint firstItem="K9g-vM-0nz" firstAttribute="leading" secondItem="hLi-hD-6FU" secondAttribute="leading" id="NmN-GY-kSw"/>
                             <constraint firstItem="riE-QW-I5I" firstAttribute="trailing" secondItem="dZP-F9-LpG" secondAttribute="trailing" id="Qab-ql-5o9"/>
-                            <constraint firstItem="zeW-Fp-HOd" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="44" id="Qu3-gr-Z5c"/>
+                            <constraint firstItem="4VX-GK-8F6" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="60" id="SLY-R1-op6"/>
                             <constraint firstItem="dZP-F9-LpG" firstAttribute="leading" secondItem="PKA-EZ-Gai" secondAttribute="leading" id="SUz-xz-uhC"/>
+                            <constraint firstItem="Gf0-jh-Buo" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="63" id="UFg-lV-Fj2"/>
                             <constraint firstItem="K9g-vM-0nz" firstAttribute="top" secondItem="Hfj-l2-lkN" secondAttribute="bottom" constant="8" symbolic="YES" id="aok-n5-iXN"/>
                             <constraint firstItem="PKA-EZ-Gai" firstAttribute="top" secondItem="riE-QW-I5I" secondAttribute="bottom" constant="14" id="fbb-X3-PzY"/>
-                            <constraint firstItem="Y5q-Ra-TxH" firstAttribute="top" secondItem="zeW-Fp-HOd" secondAttribute="bottom" constant="77" id="kOB-Y8-ZxR"/>
+                            <constraint firstItem="Y5q-Ra-TxH" firstAttribute="top" secondItem="0dv-HA-vVx" secondAttribute="bottom" constant="53" id="gfc-ck-oR5"/>
+                            <constraint firstItem="0dv-HA-vVx" firstAttribute="leading" secondItem="Gf0-jh-Buo" secondAttribute="trailing" constant="8" symbolic="YES" id="hZc-dx-tba"/>
                             <constraint firstItem="spo-km-qKR" firstAttribute="top" secondItem="dZP-F9-LpG" secondAttribute="bottom" constant="90" id="m2P-CS-V0O"/>
                             <constraint firstItem="Y5q-Ra-TxH" firstAttribute="top" secondItem="3Rv-tH-Ek1" secondAttribute="bottom" constant="53" id="rSM-7w-0Bj"/>
                             <constraint firstItem="3Rv-tH-Ek1" firstAttribute="top" secondItem="K9g-vM-0nz" secondAttribute="bottom" constant="2" id="rpP-f2-TVZ"/>
                             <constraint firstItem="dZP-F9-LpG" firstAttribute="top" secondItem="Y5q-Ra-TxH" secondAttribute="bottom" constant="23" id="uVe-f1-rV1"/>
-                            <constraint firstItem="zeW-Fp-HOd" firstAttribute="leading" secondItem="Gf0-jh-Buo" secondAttribute="trailing" constant="8" symbolic="YES" id="wdd-gG-x8f"/>
+                            <constraint firstItem="4VX-GK-8F6" firstAttribute="trailing" secondItem="0dv-HA-vVx" secondAttribute="trailing" id="vcN-Nv-EHH"/>
+                            <constraint firstItem="0dv-HA-vVx" firstAttribute="top" secondItem="4VX-GK-8F6" secondAttribute="bottom" constant="8" id="wbV-7c-sqt"/>
                             <constraint firstItem="3Rv-tH-Ek1" firstAttribute="leading" secondItem="Y5q-Ra-TxH" secondAttribute="leading" id="ySM-Fa-WOh"/>
+                            <constraint firstItem="Y5q-Ra-TxH" firstAttribute="top" secondItem="Gf0-jh-Buo" secondAttribute="bottom" constant="97" id="zJP-fE-Ex6"/>
                             <constraint firstItem="riE-QW-I5I" firstAttribute="leading" secondItem="dZP-F9-LpG" secondAttribute="leading" id="zR4-gO-FQ7"/>
                         </constraints>
                     </view>
