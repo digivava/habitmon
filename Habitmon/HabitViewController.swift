@@ -115,7 +115,7 @@ class HabitViewController: UIViewController {
     } else if level == 15 {
       congratsAlert.message = "You're doing so well with your habit that your Habitmon just evolved! Keep it up!"
     } else if level == 30 {
-      congratsAlert.message = "You've done your habit for a whole month now! Your Habitmon and its previous evolutions will be added to the Collection."
+      congratsAlert.message = "You've done your habit for a whole month now! It's fully evolved now, but feel free to keep tracking your habit!"
     }
     
     congratsAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
@@ -171,7 +171,6 @@ class HabitViewController: UIViewController {
         habit.profile = habit.profile1
         
         if realm.objects(Collection).filter("name = \"" + habit.habitmon! + "\"").count == 0 {
-          // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
           realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
         }
       }
@@ -194,7 +193,6 @@ class HabitViewController: UIViewController {
         habit.profile = habit.profile2
         
         if realm.objects(Collection).filter("name = \"" + habit.habitmon! + "\"").count == 0 {
-          // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
           realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
         }
       }
@@ -220,11 +218,6 @@ class HabitViewController: UIViewController {
         
         //if this habitmon chain does not already exist in the Collection
         if realm.objects(Collection).filter("name = \"" + habit.habitmon! + "\"").count == 0 {
-          // add this habit to the Collection, as 3 different instances (because the Collection is based on habitmon, not habits... maybe should have organized the whole thing that way, haha)
-//          realm.create(Collection.self, value: ["name": "\(habit.evolution1!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution1!)", "profile": "\(habit.profile1!)"])
-//          
-//          realm.create(Collection.self, value: ["name": "\(habit.evolution2!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution2!)", "profile": "\(habit.profile2!)"])
-//          
           realm.create(Collection.self, value: ["name": "\(habit.evolution3!)", "habit": "\(habit.name!)", "category": "\(habit.category!)", "image": "\(habit.evolution3!)", "profile": "\(habit.profile3!)"])
         }
         
