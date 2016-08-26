@@ -62,6 +62,8 @@ class HabitViewController: UIViewController {
       //to account for eggs hatching
       if habit.level < 5 {
         evolveLevelLabel.text = "Hatches at level \(evolveLevelText)"
+      } else if habit.level >= 30 {
+        evolveLevelLabel.text = "This Habitmon is fully evolved."
       } else {
         evolveLevelLabel.text = "Evolves at level \(evolveLevelText)"
       }
