@@ -12,6 +12,7 @@ import RealmSwift
 class User: Object {
   
   dynamic var ribbons: Int = 0
-  // other useful things can be added to this later! for now, it just takes care of ribbons
+  dynamic var seenTutorial: Bool = false
+  // other useful things can be added to this later!
   
 }
