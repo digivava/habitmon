@@ -23,7 +23,7 @@ class HabitTableViewController: UITableViewController {
   }
   
   func loadHabits() {
-    habits = try! Realm().objects(Habit).filter("active = true")
+    habits = try! Realm().objects(Habit).filter("active = true").sorted("level")
   }
   
   func tutorialPopup() {
