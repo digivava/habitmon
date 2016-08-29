@@ -93,7 +93,6 @@ class CollectionCollectionViewController: UIViewController, UICollectionViewDele
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         cell.name.text = habitmon.name
         cell.habitmonImage.image = UIImage(named: habitmon.image)
-        cell.backgroundColor = UIColor.lightGrayColor() // make cell more visible in our example project
       
         return cell
     }
