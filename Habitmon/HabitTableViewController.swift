@@ -30,7 +30,7 @@ class HabitTableViewController: UITableViewController {
     
     let tutorialAlert = UIAlertController(title: "How To Use This App", message: "", preferredStyle: UIAlertControllerStyle.Alert)
     
-    tutorialAlert.message = "This app helps you keep track of the daily habits, rituals, and lifestyle changes you're trying to build into your life. \n \n The 'Habits' tab shows a list of the habits you're currently working on. Use the '+' in the top right to add a new habit to work on. You can check off that you completed your habit once every 12 hours. \n \n Each time you check off your habit, your Habitmon will grow! At certain levels, your Habitmon will evolve into a brand new Habitmon, and gets added to your Collection. The 'Collection' tab shows a list of all the Habitmon you have ever collected. Collect 'em all!"
+    tutorialAlert.message = "The 'Habits' tab shows the daily habits and lifestyle changes you're currently working on. Use the '+' button to add a new habit to work on, represented by its own unique monster. \n \n You can check off that you completed a habit once every 12 hours. Each time you check off your habit, your Habitmon will grow! \n \n At certain levels, your Habitmon will evolve into a brand new Habitmon, and gets added to your Collection. The 'Collection' tab shows a list of all the Habitmon you have ever collected. Collect 'em all!"
     
     tutorialAlert.addAction(UIAlertAction(title: "Got it!", style: .Default, handler: { (action: UIAlertAction!) in
       // the tutorial has now been seen
