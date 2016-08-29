@@ -162,8 +162,7 @@ class HabitViewController: UIViewController {
       try! realm.write {
         user.ribbons += 1
       }
-      // CHANGE THIS BACK TO 5
-    } else if habit.level == 2 {
+    } else if habit.level == 5 {
       congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution1
@@ -185,8 +184,7 @@ class HabitViewController: UIViewController {
       try! realm.write {
         user.ribbons += 1
       }
-    //CHANGE THIS BACK TO 15
-    } else if habit.level == 4 {
+    } else if habit.level == 15 {
       congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution2
@@ -208,8 +206,7 @@ class HabitViewController: UIViewController {
       try! realm.write {
         user.ribbons += 1
       }
-    //CHANGE THIS BACK TO 30
-    } else if habit.level == 6 {
+    } else if habit.level == 30 {
       congratsPopup(habit.level)
       try! realm.write {
         habit.habitmon = habit.evolution3
