@@ -36,7 +36,7 @@ class CollectionViewController: UIViewController {
       let month = components.month
       let day = components.day
       let year =  components.year
-      dateAdded.text = "You completed this habit on \(month)-\(day)-\(year)."
+      dateAdded.text = "You unlocked this Habitmon on \(month)-\(day)-\(year)."
     }
 
     override func didReceiveMemoryWarning() {
