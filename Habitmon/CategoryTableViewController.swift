@@ -52,6 +52,8 @@ class CategoryTableViewController: UITableViewController {
       realm.create(Habit.self, value: ["id": 8, "name": "Write 1000 words", "category": "Creative", "evolution1": "Wordvark", "evolution2": "Pengolin", "evolution3": "Bookupine", "profile1": "Patches of its skin open up to reveal inspiring passages from great works of literature, tragically relevant poetry, and occasionally trashy clickbait articles from the Internet.", "profile2": "Its ink-tipped tongue can produce manuscripts at 200 WPM. Does its best thinking in the early morning.", "profile3": "Its awkward introversion leads to it often being misunderstood. Uses its fountain-pen quills to work on many projects at once. Likes to be given coffee in its water bowl."])
       
       realm.create(Habit.self, value: ["id": 9, "name": "8 cups of water", "category": "Diet", "evolution1": "Splashrew", "evolution2": "Aquassum", "evolution3": "Bubblebat", "profile1": "Squeaks when your water bottle is getting low. Likes to be scratched behind its ears.", "profile2": "If you're not getting enough water, this Habitmon tries to help by rubbing its wet body all over your nice warm clothes.", "profile3": "Always slurping up seltzer water through its long tongue. At least its burps are cute."])
+      
+      realm.create(Habit.self, value: ["id": 10, "name": "Go jogging", "category": "Fitness", "evolution1": "Joghog", "evolution2": "Hamstring", "evolution3": "Marathoink", "profile1": "Tries its best to keep up but runs out of breath easily. Skilled at tripping.", "profile2": "Wakes up at the crack of dawn for a run, followed by a mud bath. Loves protein shakes.", "profile3": "Hums motivational workout music in its sleep. Ties its shoelaces with vicious fervor. 100% muscle, somehow."])
     }
   }
 
