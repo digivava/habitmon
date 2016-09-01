@@ -1,12 +1,7 @@
 # Habitmon Contributors #
 
-## Art & Character Design ##
-- Apple Atti
-  * Art and design for Barnuckle, Shellflex, Flossiraptor, Pterodentyl, Buffaloaf, Wildayeest
+- **Atti** ([appleatti.tumblr.com](appleatti.tumblr.com))
+  * Visual development and art for Butterhorn, Buffaloaf, Wildayeest, Flossiraptor, Pteradentyl, Barnuckle, and Shellflex
 
-- Amber Beane
+- **Amber Beane** ([ambafius.tumblr.com](ambafius.tumblr.com))
   * Art and design for Songkong, Orangutwang, Chimphony, Speakter, Bilinghoul, Langwitch
-
-## Naming & Character Design Ideas ##
-- Alex Kitelinger
-- Maegyn Merwin
