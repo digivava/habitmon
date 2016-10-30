@@ -56,6 +56,12 @@ class HabitTableViewController: UITableViewController {
   
   override func viewWillAppear(animated: Bool) {
     //so that the table data will refresh when the page is visited again
+    let footerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.tableView.frame.size.width, height: 0.5))
+    
+    footerView.backgroundColor = UIColor.lightGrayColor()
+    
+    self.tableView.tableFooterView = footerView
+    
     self.tableView.reloadData()
   }
   
